@@ -1,11 +1,11 @@
-using AspNetWebpack;
+using AspNet.AssetManager;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
 
-builder.Services.AddAspNetWebpack(builder.Configuration, builder.Environment);
+builder.Services.AddAssetManager(builder.Configuration, builder.Environment);
 
 var app = builder.Build();
 
