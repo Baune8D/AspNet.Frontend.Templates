@@ -431,7 +431,7 @@ FodyWeavers.xsd
 
 ## Visual Studio Code
 ##
-## Get latest from https://github.com/github/gitignore/blob/master/Global/VisualStudioCode.gitignore
+## Get latest from https://github.com/github/gitignore/blob/main/Global/VisualStudioCode.gitignore
 
 .vscode/*
 !.vscode/settings.json
@@ -448,7 +448,7 @@ FodyWeavers.xsd
 
 ## JetBrains
 ##
-## Get latest from https://github.com/github/gitignore/blob/master/Global/JetBrains.gitignore
+## Get latest from https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
 
 # Covers JetBrains IDEs: IntelliJ, GoLand, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
@@ -538,7 +538,7 @@ http-client.private.env.json
 
 ## Node.js
 ##
-## Get latest from https://github.com/github/gitignore/blob/master/Node.gitignore
+## Get latest from https://github.com/github/gitignore/blob/main/Node.gitignore
 
 # Logs
 logs
@@ -684,7 +684,7 @@ vite.config.ts.timestamp-*
 
 ## Windows
 ##
-## Get latest from https://github.com/github/gitignore/blob/master/Global/Windows.gitignore
+## Get latest from https://github.com/github/gitignore/blob/main/Global/Windows.gitignore
 
 # Windows thumbnail cache files
 Thumbs.db
@@ -715,7 +715,7 @@ $RECYCLE.BIN/
 
 ## macOS
 ##
-## Get latest from https://github.com/github/gitignore/blob/master/Global/macOS.gitignore
+## Get latest from https://github.com/github/gitignore/blob/main/Global/macOS.gitignore
 
 # General
 .DS_Store
