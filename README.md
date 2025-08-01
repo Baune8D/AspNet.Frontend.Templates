@@ -18,7 +18,7 @@ Bundles will not be generated for partial views and view components.
 Import aliases are automatically configured so root can be resolved using: `@/`.  
 If using areas, they are automatically aliased also using: `@<area>/`.
 
-The Webpack configuration is configured to split all `node_modules` code into a reusable `Vendor.js` bundle.
+The Webpack configuration is configured to split all `node_modules` code into a reusable `Vendor.js` bundle.  
 It also uses content hashes for resulting non-development bundle names.
 
 Source maps are enabled for easy debugging.
