@@ -13,7 +13,7 @@ var bundle = ViewData.GetBundleName() ?? Html.GetBundleName();
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>@ViewData["Title"] - AspNet.Webpack.RazorPages</title>
     @await AssetService.GetLinkTagAsync("Vendor")
-    @await AssetService.GetLinkTagAsync(bundle, "Layout")
+    @await AssetService.GetLinkTagAsync(bundle, fallback: "Layout")
 </head>
 <body>
 <header>
@@ -50,7 +50,7 @@ var bundle = ViewData.GetBundleName() ?? Html.GetBundleName();
 </footer>
 
 @await AssetService.GetScriptTagAsync("Vendor")
-@await AssetService.GetScriptTagAsync(bundle, "Layout")
+@await AssetService.GetScriptTagAsync(bundle, fallback: "Layout")
 
 @await RenderSectionAsync("Scripts", required: false)
 </body>

@@ -7,33 +7,36 @@ import { webpackConfig } from 'aspnet-buildtools';
 
 export default (() => {
   const isDevelopment = process.env.NODE_ENV === 'development';
-  const output = path.resolve(import.meta.dirname, 'wwwroot/dist');
-  const manifest = 'manifest.json';
   const publicPath = '/dist/';
 
-  const filename = (ext) => {
-    return isDevelopment
-        ? `[name].${ext}`
-        : `[name].min.${ext}?v=[contenthash]`;
-  };
+  // Use normal name in development for easy debugging.
+  // Use hash as a filename in production for cache busting.
+  const filename = (ext) => (isDevelopment
+      ? `[name].${ext}`
+      : `[contenthash].min.${ext}`);
 
   const config = {
-    ...webpackConfig(import.meta.dirname),
+    ...webpackConfig(),
     output: {
-      publicPath,
+      path: path.resolve(import.meta.dirname, 'wwwroot/dist'),
       filename: filename('js'),
+      publicPath,
     },
+    devtool: 'source-map',
     optimization: {
+      // Extend minimizer with CSS minification.
       minimizer: [new CssMinimizerPlugin(), '...'],
       splitChunks: {
         cacheGroups: {
           // Extract all code from node_modules into separate Vendor bundle.
           defaultVendors: {
-            name: 'Vendor',
+            // Default configuration.
             test: /[\\/]node_modules[\\/]/,
-            chunks: 'initial',
-            priority: 90,
-            minSize: 0,
+            priority: -10,
+            reuseExistingChunk: true,
+            // Custom configuration.
+            name: 'Vendor',
+            chunks: 'all',
           },
         }
       }
@@ -41,24 +44,23 @@ export default (() => {
     module: {
       rules: [
         {
+          // Extract CSS to separate files: Part 1
           test: /\.css$/i,
           use: [MiniCssExtractPlugin.loader, "css-loader"],
         },
       ],
     },
     plugins: [
+      // Extract CSS to separate files: Part 2
       new MiniCssExtractPlugin({
         filename: filename('css'),
       }),
+      // Generate manifest for use with AssetManager.
       new WebpackAssetsManifest({
-        output: isDevelopment ? manifest : path.resolve(output, manifest),
         customize: (entry) => {
-          const { key } = entry;
-          if (key === 'runtime.js') {
-            return entry;
-          }
-          const lowerKey = key.toLowerCase();
-          if (!lowerKey.endsWith('.css') && !lowerKey.endsWith('.js')) {
+          const key = entry.key.toLowerCase();
+          // Only include CSS and JS files in the manifest.
+          if (!key.endsWith('.css') && !key.endsWith('.js')) {
             return false;
           }
           return entry;
@@ -81,7 +83,7 @@ export default (() => {
       hot: true,
     };
   } else {
-    config.output.path = output;
+    // Cleanup output folder on every build.
     config.plugins.push(new CleanWebpackPlugin());
   }
 
