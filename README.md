@@ -4,11 +4,11 @@ This project is a minimal template for using ASP.NET Core with modern frontend b
 It is built upon the original MVC template and can be customized any way you want.
 
 Additional related repos:
-* [AspNet.AssetManager](https://github.com/Baune8D/AspNet.AssetManager) - C# code for working with the generated assets. See here more documentation here.
+* [AspNet.AssetManager](https://github.com/Baune8D/AspNet.AssetManager) - C# code for working with the generated assets. **See here more documentation here.**
 * [aspnet-buildtools](https://github.com/Baune8D/aspnet-buildtools) - NPM package that helps with build tool configuration.
 
 View-specific bundles are automatically created for each `.cshtml` file with a corresponding `.cshtml.{js,ts}` file in the same location.  
-**Note:** TypeScript support is not included out of the box. It needs to be configured manually in the Webpack configuration of needed.
+**Note:** TypeScript support is not included out of the box. It needs to be configured manually in the Webpack configuration if needed.
 
 Bundles will not be generated for partial views and view components.
 
