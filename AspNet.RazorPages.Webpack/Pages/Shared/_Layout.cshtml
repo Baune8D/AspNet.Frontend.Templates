@@ -1,4 +1,4 @@
-@using AspNet.AssetManager
+﻿@using AspNet.AssetManager
 
 @inject IAssetService AssetService
 
@@ -11,15 +11,15 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>@ViewData["Title"] - AspNetWebpack</title>
+    <title>@ViewData["Title"] - AspNet.RazorPages.Webpack</title>
     @await AssetService.GetLinkTagAsync("Vendor")
     @await AssetService.GetLinkTagAsync(bundle, fallback: "Layout")
 </head>
 <body>
 <header>
     <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-        <div class="container-fluid">
-            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">WebApplication1</a>
+        <div class="container">
+            <a class="navbar-brand" asp-area="" asp-page="/Index">WebApplication2</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -27,10 +27,10 @@
             <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                 <ul class="navbar-nav flex-grow-1">
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
                     </li>
                 </ul>
             </div>
@@ -45,11 +45,13 @@
 
 <footer class="border-top footer text-muted">
     <div class="container">
-        &copy; 2025 - AspNet.Webpack.Mvc - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        &copy; 2025 - AspNet.RazorPages.Webpack - <a asp-area="" asp-page="/Privacy">Privacy</a>
     </div>
 </footer>
+
 @await AssetService.GetScriptTagAsync("Vendor")
 @await AssetService.GetScriptTagAsync(bundle, fallback: "Layout")
+
 @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

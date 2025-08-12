@@ -1,8 +1,8 @@
 ﻿using System.Diagnostics;
-using AspNet.Webpack.Mvc.Models;
+using AspNet.Mvc.Webpack.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace AspNet.Webpack.Mvc.Controllers;
+namespace AspNet.Mvc.Webpack.Controllers;
 
 public class HomeController : Controller
 {

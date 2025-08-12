@@ -8,13 +8,13 @@ import { webpackConfig } from 'aspnet-buildtools';
 export default (() => {
   const isDevelopment = process.env.NODE_ENV === 'development';
   const publicPath = '/dist/';
-  
+
   // Use normal name in development for easy debugging.
   // Use hash as a filename in production for cache busting.
   const filename = (ext) => (isDevelopment
       ? `[name].${ext}`
       : `[contenthash].min.${ext}`);
-  
+
   const config = {
     ...webpackConfig(),
     output: {
