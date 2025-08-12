@@ -1,1 +1,1 @@
-import '@/pages/Shared/_Layout';
+import '@/Pages/Shared/_Layout.cshtml.js';
