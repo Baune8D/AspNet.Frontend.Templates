@@ -5,7 +5,7 @@ import CssMinimizerPlugin from 'css-minimizer-webpack-plugin';
 import { webpackConfig } from 'aspnet-buildtools';
 
 export default {
-  ...webpackConfig(),
+  ...webpackConfig,
   output: {
     path: path.resolve(import.meta.dirname, 'wwwroot/dist'),
     filename: '[name]-[contenthash].js',
@@ -13,25 +13,9 @@ export default {
     // Clean the output directory before build.
     clean: true,
   },
-  // Enable source maps
-  devtool: 'source-map',
   optimization: {
     // Extend minimizer with CSS minification.
     minimizer: [new CssMinimizerPlugin(), '...'],
-    splitChunks: {
-      cacheGroups: {
-        // Extract all code from node_modules into separate Vendor bundle.
-        defaultVendors: {
-          // Default Webpack configuration.
-          test: /[\\/]node_modules[\\/]/,
-          priority: -10,
-          reuseExistingChunk: true,
-          // Custom configuration addition.
-          name: 'Vendor',
-          chunks: 'all',
-        },
-      }
-    }
   },
   module: {
     rules: [

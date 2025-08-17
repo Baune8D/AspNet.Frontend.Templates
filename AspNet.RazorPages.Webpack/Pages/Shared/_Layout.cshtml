@@ -12,7 +12,6 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>@ViewData["Title"] - AspNet.RazorPages.Webpack</title>
-    @await AssetService.GetLinkTagAsync("Vendor")
     @await AssetService.GetLinkTagAsync(bundle, fallback: "Layout")
 </head>
 <body>
@@ -49,7 +48,6 @@
     </div>
 </footer>
 
-@await AssetService.GetScriptTagAsync("Vendor")
 @await AssetService.GetScriptTagAsync(bundle, fallback: "Layout")
 
 @await RenderSectionAsync("Scripts", required: false)

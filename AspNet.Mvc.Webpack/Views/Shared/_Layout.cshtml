@@ -12,7 +12,6 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>@ViewData["Title"] - AspNetWebpack</title>
-    @await AssetService.GetLinkTagAsync("Vendor")
     @await AssetService.GetLinkTagAsync(bundle, fallback: "Layout")
 </head>
 <body>
@@ -48,7 +47,6 @@
         &copy; 2025 - AspNet.Mvc.Webpack - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
     </div>
 </footer>
-@await AssetService.GetScriptTagAsync("Vendor")
 @await AssetService.GetScriptTagAsync(bundle, fallback: "Layout")
 @await RenderSectionAsync("Scripts", required: false)
 </body>

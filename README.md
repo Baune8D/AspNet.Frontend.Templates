@@ -20,10 +20,5 @@ The `_Layout.cshtml` view is configured to automatically include a view-specific
 Import aliases are automatically configured so root can be resolved using: `@/`.  
 If using areas, they are also automatically aliased also using: `@<area>/`.
 
-The Webpack configuration is configured to split all `node_modules` code into a reusable `Vendor.js` bundle.  
-It also uses content hashes for resulting non-development bundle names. This helps with proper cache busting.
-
-Source maps are enabled for easy debugging.
-
 Start development server with hot-reload using `npm start` script in project folder.  
 Build production assets using `npm run build` script in project folder.
