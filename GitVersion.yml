@@ -1,0 +1,8 @@
+next-version: 1.0.0
+branches:
+  main:
+    label: beta
+  develop:
+    increment: Patch
+ignore:
+  sha: []
