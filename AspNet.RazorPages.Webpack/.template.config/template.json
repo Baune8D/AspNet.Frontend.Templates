@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Baune8D",
+  "classifications": [
+    "Web",
+    "Razor Pages",
+    "Webpack"
+  ],
+  "identity": "AspNet.RazorPages.Webpack",
+  "name": "ASP.NET Core Razor Pages with Webpack",
+  "shortName": "razorwebpack",
+  "sourceName":"AspNet.RazorPages.Webpack",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  }
+}

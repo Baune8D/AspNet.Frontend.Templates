@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Baune8D",
+  "classifications": [
+    "Web",
+    "MVC",
+    "Webpack"
+  ],
+  "identity": "AspNet.Mvc.Webpack",
+  "name": "ASP.NET Core MVC with Webpack",
+  "shortName": "mvcwebpack",
+  "sourceName":"AspNet.Mvc.Webpack",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  }
+}

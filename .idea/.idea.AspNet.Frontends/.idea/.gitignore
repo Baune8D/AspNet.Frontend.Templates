@@ -3,7 +3,7 @@
 /workspace.xml
 # Rider ignored files
 /projectSettingsUpdater.xml
-/.idea.AspNet.Frontends.iml
+/.idea.AspNet.Frontend.Templates.iml
 /modules.xml
 /contentModel.xml
 # Editor-based HTTP Client requests

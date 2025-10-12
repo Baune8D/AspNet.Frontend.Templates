@@ -1,4 +1,4 @@
-# AspNet.Frontends
+# AspNet.Frontend.Templates
 
 This project is a minimal template for using ASP.NET Core with modern frontend build tools.  
 It is built upon the original MVC template and can be customized any way you want.
