@@ -11,13 +11,13 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
-    "bootstrap": "^5.3.7",
+    "bootstrap": "^5.3.8",
     "jquery": "^3.7.1",
     "jquery-validation": "^1.21.0",
     "jquery-validation-unobtrusive": "^4.0.0"
   },
   "devDependencies": {
-    "aspnet-buildtools": "^0.2.5",
-    "vite": "^7.1.5"
+    "aspnet-buildtools": "^0.2.6",
+    "vite": "^7.1.10"
   }
 }
