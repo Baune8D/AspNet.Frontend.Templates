@@ -1,18 +1,10 @@
-﻿@using AspNet.AssetManager
-
-@inject IAssetService AssetService
-
-@{
-    var bundle = ViewData.GetBundleName() ?? Html.GetBundleName();
-}
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>@ViewData["Title"] - AspNet.RazorPages.Webpack</title>
-    @await AssetService.GetLinkTagAsync(bundle, fallback: "Layout")
+    <link-bundle fallback="Layout" />
 </head>
 <body>
 <header>
@@ -48,7 +40,7 @@
     </div>
 </footer>
 
-@await AssetService.GetScriptTagAsync(bundle, fallback: "Layout")
+<script-bundle fallback="Layout" />
 
 @await RenderSectionAsync("Scripts", required: false)
 </body>

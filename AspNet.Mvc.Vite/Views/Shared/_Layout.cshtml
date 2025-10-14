@@ -1,21 +1,13 @@
-@using AspNet.AssetManager
-
-@inject IAssetService AssetService
-
-@{
-    var bundle = ViewData.GetBundleName() ?? Html.GetBundleName();
-}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>@ViewData["Title"] - AspNetWebpack</title>
+    <title>@ViewData["Title"] - AspNet.Mvc.Vite</title>
     <environment include="Development">
         <script src="http://localhost:5173/@@vite/client" type="module"></script>
     </environment>
-    @await AssetService.GetLinkTagAsync(bundle, fallback: "Layout")
+    <link-bundle fallback="Layout" />
 </head>
 <body>
 <header>
@@ -50,7 +42,7 @@
         &copy; 2025 - AspNet.Mvc.Webpack - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
     </div>
 </footer>
-@await AssetService.GetScriptTagAsync(bundle, fallback: "Layout")
+<script-bundle fallback="Layout" />
 @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
