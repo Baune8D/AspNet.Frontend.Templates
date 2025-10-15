@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "module": "Preserve",
+    "moduleResolution": "bundler",
+    "noImplicitAny": true,
+    "target": "ES6",
+    "paths": {
+      "@/*": ["./*"]
+    }
+  }
+}

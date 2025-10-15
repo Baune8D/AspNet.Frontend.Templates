@@ -24,6 +24,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNet.RazorPages.Webpack",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_build", "build\_build.csproj", "{CDC730C9-05C8-4D76-A4C4-95570EB50FD9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNet.Mvc.Webpack.TypeScript", "AspNet.Mvc.Webpack.TypeScript\AspNet.Mvc.Webpack.TypeScript.csproj", "{DA1B95AA-19A9-4460-9A31-8A2170705F40}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNet.RazorPages.Webpack.TypeScript", "AspNet.RazorPages.Webpack.TypeScript\AspNet.RazorPages.Webpack.TypeScript.csproj", "{6F5E1CB9-73E4-4D4C-8D61-90653FE51458}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,6 +52,14 @@ Global
 		{1B0025DD-0D99-4593-903F-EC10CF69297B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CDC730C9-05C8-4D76-A4C4-95570EB50FD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CDC730C9-05C8-4D76-A4C4-95570EB50FD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA1B95AA-19A9-4460-9A31-8A2170705F40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA1B95AA-19A9-4460-9A31-8A2170705F40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA1B95AA-19A9-4460-9A31-8A2170705F40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA1B95AA-19A9-4460-9A31-8A2170705F40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F5E1CB9-73E4-4D4C-8D61-90653FE51458}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F5E1CB9-73E4-4D4C-8D61-90653FE51458}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F5E1CB9-73E4-4D4C-8D61-90653FE51458}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F5E1CB9-73E4-4D4C-8D61-90653FE51458}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
