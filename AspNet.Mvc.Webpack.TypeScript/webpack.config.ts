@@ -1,3 +1,5 @@
+import type webpack from 'webpack';
+import 'webpack-dev-server';
 import path from 'node:path';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { WebpackAssetsManifest } from 'webpack-assets-manifest';
@@ -54,4 +56,4 @@ export default {
     port: 9000,
     hot: true,
   }
-};
+} satisfies webpack.Configuration;

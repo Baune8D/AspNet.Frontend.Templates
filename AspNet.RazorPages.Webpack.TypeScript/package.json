@@ -4,8 +4,8 @@
   "description": "This project is a template for using ASP.NET Core with Webpack and TypeScript.",
   "private": true,
   "scripts": {
-    "build": "webpack --mode=production",
-    "start": "webpack serve --mode=development"
+    "build": "cross-env NODE_OPTIONS='--loader=ts-node/esm --disable-warning=ExperimentalWarning' webpack --mode=production",
+    "start": "cross-env NODE_OPTIONS='--loader=ts-node/esm --disable-warning=ExperimentalWarning' webpack serve --mode=development"
   },
   "author": "",
   "license": "ISC",
@@ -17,11 +17,15 @@
     "jquery-validation-unobtrusive": "^4.0.0"
   },
   "devDependencies": {
+    "@types/node": "^22.18.10",
+    "@types/webpack": "^5.28.5",
     "aspnet-buildtools": "^0.2.6",
+    "cross-env": "^10.1.0",
     "css-loader": "^7.1.2",
     "css-minimizer-webpack-plugin": "^7.0.2",
     "mini-css-extract-plugin": "^2.9.4",
     "ts-loader": "^9.5.4",
+    "ts-node": "^10.9.2",
     "tsconfig-paths-webpack-plugin": "^4.2.0",
     "typescript": "^5.9.3",
     "webpack": "^5.102.1",
