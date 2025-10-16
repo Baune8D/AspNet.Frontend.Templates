@@ -27,7 +27,8 @@
         "Clean",
         "Package",
         "PushMyGet",
-        "PushNuGet"
+        "PushNuGet",
+        "Test"
       ]
     },
     "Verbosity": {

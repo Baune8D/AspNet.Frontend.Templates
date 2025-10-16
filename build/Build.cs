@@ -9,9 +9,11 @@ using Nuke.Common.ProjectModel;
 using Nuke.Common.Tooling;
 using Nuke.Common.Tools.DotNet;
 using Nuke.Common.Tools.GitVersion;
+using Nuke.Common.Tools.Npm;
 using Nuke.Common.Tools.NuGet;
 using Nuke.Common.Utilities.Collections;
 using static Nuke.Common.Tools.DotNet.DotNetTasks;
+using static Nuke.Common.Tools.Npm.NpmTasks;
 using static Nuke.Common.Tools.NuGet.NuGetTasks;
 
 // ReSharper disable AllUnderscoreLocalParameterName
@@ -53,7 +55,31 @@ class Build : NukeBuild
             ArtifactsDirectory.CreateOrCleanDirectory();
         });
 
+    Target Test => _ => _
+        .Executes(() =>
+        {
+            var templates = RootDirectory / "templates";
+            
+            templates.GlobFiles("*/*.csproj")
+                .ForEach(project => DotNetBuild(s => s
+                    .SetProjectFile(project)
+                    .SetConfiguration("Release")
+                    .EnableTreatWarningsAsErrors()));
+            
+            templates.GlobFiles("*/package.json")
+                .ForEach(project =>
+                {
+                    NpmInstall(s => s
+                        .SetProcessWorkingDirectory(project.Parent));
+                    
+                    NpmRun(s => s
+                        .SetProcessWorkingDirectory(project.Parent)
+                        .SetCommand("build"));
+                });
+        });
+    
     Target Package => _ => _
+        .DependsOn(Test)
         .Produces(ArtifactsDirectory / "*.nupkg")
         .Executes(() =>
         {
