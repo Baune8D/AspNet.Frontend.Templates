@@ -15,23 +15,23 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.editorconfig = .editorconfig
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNet.Mvc.Vite", "AspNet.Mvc.Vite\AspNet.Mvc.Vite.csproj", "{3314568C-4F85-41E7-BBE7-37C4D70B1FC0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNet.Mvc.Vite", "templates\AspNet.Mvc.Vite\AspNet.Mvc.Vite.csproj", "{3314568C-4F85-41E7-BBE7-37C4D70B1FC0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNet.Mvc.Webpack", "AspNet.Mvc.Webpack\AspNet.Mvc.Webpack.csproj", "{1E0BBF5D-C7EE-436F-9E75-25BEA118A792}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNet.Mvc.Webpack", "templates\AspNet.Mvc.Webpack\AspNet.Mvc.Webpack.csproj", "{1E0BBF5D-C7EE-436F-9E75-25BEA118A792}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNet.RazorPages.Vite", "AspNet.RazorPages.Vite\AspNet.RazorPages.Vite.csproj", "{1B0025DD-0D99-4593-903F-EC10CF69297B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNet.RazorPages.Vite", "templates\AspNet.RazorPages.Vite\AspNet.RazorPages.Vite.csproj", "{1B0025DD-0D99-4593-903F-EC10CF69297B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNet.RazorPages.Webpack", "AspNet.RazorPages.Webpack\AspNet.RazorPages.Webpack.csproj", "{CA875206-7C7C-4799-A8B0-F46F9A272699}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNet.RazorPages.Webpack", "templates\AspNet.RazorPages.Webpack\AspNet.RazorPages.Webpack.csproj", "{CA875206-7C7C-4799-A8B0-F46F9A272699}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_build", "build\_build.csproj", "{CDC730C9-05C8-4D76-A4C4-95570EB50FD9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNet.Mvc.Webpack.TypeScript", "AspNet.Mvc.Webpack.TypeScript\AspNet.Mvc.Webpack.TypeScript.csproj", "{DA1B95AA-19A9-4460-9A31-8A2170705F40}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNet.Mvc.Webpack.TypeScript", "templates\AspNet.Mvc.Webpack.TypeScript\AspNet.Mvc.Webpack.TypeScript.csproj", "{DA1B95AA-19A9-4460-9A31-8A2170705F40}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNet.RazorPages.Webpack.TypeScript", "AspNet.RazorPages.Webpack.TypeScript\AspNet.RazorPages.Webpack.TypeScript.csproj", "{6F5E1CB9-73E4-4D4C-8D61-90653FE51458}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNet.RazorPages.Webpack.TypeScript", "templates\AspNet.RazorPages.Webpack.TypeScript\AspNet.RazorPages.Webpack.TypeScript.csproj", "{6F5E1CB9-73E4-4D4C-8D61-90653FE51458}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNet.Mvc.Vite.TypeScript", "AspNet.Mvc.Vite.TypeScript\AspNet.Mvc.Vite.TypeScript.csproj", "{E2D917C8-BEC6-4F26-A306-E178FBC89DB3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNet.Mvc.Vite.TypeScript", "templates\AspNet.Mvc.Vite.TypeScript\AspNet.Mvc.Vite.TypeScript.csproj", "{E2D917C8-BEC6-4F26-A306-E178FBC89DB3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNet.RazorPages.Vite.TypeScript", "AspNet.RazorPages.Vite.TypeScript\AspNet.RazorPages.Vite.TypeScript.csproj", "{34BA157B-6576-4A84-B675-188ED24CB06C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNet.RazorPages.Vite.TypeScript", "templates\AspNet.RazorPages.Vite.TypeScript\AspNet.RazorPages.Vite.TypeScript.csproj", "{34BA157B-6576-4A84-B675-188ED24CB06C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
