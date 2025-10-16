@@ -30,9 +30,11 @@
     
     <ItemGroup>
         <Content Include="AspNet.Mvc.Vite\**\*" Exclude="**\bin\**;**\obj\**;**\node_modules\**;**\dist\**" />
+        <Content Include="AspNet.Mvc.Vite.TypeScript\**\*" Exclude="**\bin\**;**\obj\**;**\node_modules\**;**\dist\**" />
         <Content Include="AspNet.Mvc.Webpack\**\*" Exclude="**\bin\**;**\obj\**;**\node_modules\**;**\dist\**" />
         <Content Include="AspNet.Mvc.Webpack.TypeScript\**\*" Exclude="**\bin\**;**\obj\**;**\node_modules\**;**\dist\**" />
         <Content Include="AspNet.RazorPages.Vite\**\*" Exclude="**\bin\**;**\obj\**;**\node_modules\**;**\dist\**" />
+        <Content Include="AspNet.RazorPages.Vite.TypeScript\**\*" Exclude="**\bin\**;**\obj\**;**\node_modules\**;**\dist\**" />
         <Content Include="AspNet.RazorPages.Webpack\**\*" Exclude="**\bin\**;**\obj\**;**\node_modules\**;**\dist\**" />
         <Content Include="AspNet.RazorPages.Webpack.TypeScript\**\*" Exclude="**\bin\**;**\obj\**;**\node_modules\**;**\dist\**" />
         <Compile Remove="**\*" />

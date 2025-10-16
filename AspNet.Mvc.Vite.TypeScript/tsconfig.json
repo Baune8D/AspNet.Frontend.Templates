@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "module": "Preserve",
+    "moduleResolution": "bundler",
+    "noEmit": true,
+    "noImplicitAny": true,
+    "target": "ES6",
+    "types": ["vite/client"],
+    "paths": {
+      "@/*": ["./*"]
+    }
+  }
+}
