@@ -34,3 +34,13 @@ If using areas, they are also automatically aliased using: `@<area>/`.
 
 Start development server with hot-reload using `npm start` script in project folder.  
 Build production assets using `npm run build` script in project folder.
+
+See the extended sample project here: [Example.Mvc.Webpack](https://github.com/Baune8D/AspNet.Frontend.Templates/tree/main/examples/Example.Mvc.Webpack)
+
+## Notes
+
+#### Webpack:
+  * When adding new entry points, the dev-server will need to be restarted to pick them up.
+
+#### Vite:
+  * Dev server does not support extracting CSS files, so you will see a flash of unstyled content.
