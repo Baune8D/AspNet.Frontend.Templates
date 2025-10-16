@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "name": "aspnet-mvc-webpack",
-  "description": "This project is a template for using ASP.NE MVC with Webpack.",
+  "description": "This project is a template for using ASP.NET MVC with Webpack.",
   "private": true,
   "scripts": {
     "build": "webpack --mode=production",

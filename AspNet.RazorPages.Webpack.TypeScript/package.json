@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "name": "aspnet-razorpages-webpack-typescript",
-  "description": "This project is a template for using ASP.NET Core with Webpack and TypeScript.",
+  "description": "This project is a template for using ASP.NET Razor Pages with Webpack and TypeScript.",
   "private": true,
   "scripts": {
     "build": "cross-env NODE_OPTIONS='--loader=ts-node/esm --disable-warning=ExperimentalWarning' webpack --mode=production",

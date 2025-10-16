@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "name": "aspnet-razorpages-webpack",
-  "description": "This project is a template for using ASP.NET Core with Webpack.",
+  "description": "This project is a template for using ASP.NET Razor Pages with Webpack.",
   "private": true,
   "scripts": {
     "build": "webpack --mode=production",
