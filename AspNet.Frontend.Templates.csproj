@@ -1,45 +1,45 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <PackageId>AspNet.Frontend.Templates</PackageId>
-    <PackageVersion>1.0</PackageVersion>
-    <Title>ASP.NET Frontend Templates</Title>
-    <Authors>Baune8D</Authors>
-    <Description>ASP.NET templates for modern frontend build tools</Description>
-    <PackageTags>MVC;Razor Pages;Vite;Webpack</PackageTags>
-    <PackageProjectUrl>https://github.com/Baune8D/AspNet.Frontend.Templates</PackageProjectUrl>
-
-    <!-- Keep package type as 'Template' to show the package as a template package on nuget.org and make your template available in dotnet new search.-->
-    <PackageType>Template</PackageType>
-    <TargetFramework>net9.0</TargetFramework>
-    <IncludeContentInPack>true</IncludeContentInPack>
-    <IncludeBuildOutput>false</IncludeBuildOutput>
-    <ContentTargetFolders>content</ContentTargetFolders>
-    <NoWarn>$(NoWarn);NU5128</NoWarn>
-    <NoDefaultExcludes>true</NoDefaultExcludes>
-    <PackageReadmeFile>README.md</PackageReadmeFile>
-  </PropertyGroup>
-
-  <PropertyGroup>
-    <LocalizeTemplates>false</LocalizeTemplates>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.TemplateEngine.Tasks" Version="*" PrivateAssets="all" IsImplicitlyDefined="true"/>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="AspNet.Mvc.Vite\**\*" Exclude="**\bin\**;**\obj\**;**\node_modules\**;**\dist\**" />
-    <Content Include="AspNet.Mvc.Webpack\**\*" Exclude="**\bin\**;**\obj\**;**\node_modules\**;**\dist\**" />
-    <Content Include="AspNet.Mvc.Webpack.TypeScript\**\*" Exclude="**\bin\**;**\obj\**;**\node_modules\**;**\dist\**" />
-    <Content Include="AspNet.RazorPages.Vite\**\*" Exclude="**\bin\**;**\obj\**;**\node_modules\**;**\dist\**" />
-    <Content Include="AspNet.RazorPages.Webpack\**\*" Exclude="**\bin\**;**\obj\**;**\node_modules\**;**\dist\**" />
-    <Content Include="AspNet.RazorPages.Webpack.TypeScript\**\*" Exclude="**\bin\**;**\obj\**;**\node_modules\**;**\dist\**" />
-    <Compile Remove="**\*" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="README.md" Pack="true" PackagePath="" />
-  </ItemGroup>
+    <PropertyGroup>
+        <PackageId>AspNet.Frontend.Templates</PackageId>
+        <PackageVersion>1.0</PackageVersion>
+        <Title>ASP.NET Frontend Templates</Title>
+        <Authors>Baune8D</Authors>
+        <Description>ASP.NET templates for modern frontend build tools</Description>
+        <PackageTags>MVC;Razor Pages;Vite;Webpack</PackageTags>
+        <PackageProjectUrl>https://github.com/Baune8D/AspNet.Frontend.Templates</PackageProjectUrl>
+        
+        <!-- Keep package type as 'Template' to show the package as a template package on nuget.org and make your template available in dotnet new search.-->
+        <PackageType>Template</PackageType>
+        <TargetFramework>net9.0</TargetFramework>
+        <IncludeContentInPack>true</IncludeContentInPack>
+        <IncludeBuildOutput>false</IncludeBuildOutput>
+        <ContentTargetFolders>content</ContentTargetFolders>
+        <NoWarn>$(NoWarn);NU5128</NoWarn>
+        <NoDefaultExcludes>true</NoDefaultExcludes>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+    </PropertyGroup>
+    
+    <PropertyGroup>
+        <LocalizeTemplates>false</LocalizeTemplates>
+    </PropertyGroup>
+    
+    <ItemGroup>
+        <PackageReference Include="Microsoft.TemplateEngine.Tasks" Version="*" PrivateAssets="all" IsImplicitlyDefined="true"/>
+    </ItemGroup>
+    
+    <ItemGroup>
+        <Content Include="AspNet.Mvc.Vite\**\*" Exclude="**\bin\**;**\obj\**;**\node_modules\**;**\dist\**" />
+        <Content Include="AspNet.Mvc.Webpack\**\*" Exclude="**\bin\**;**\obj\**;**\node_modules\**;**\dist\**" />
+        <Content Include="AspNet.Mvc.Webpack.TypeScript\**\*" Exclude="**\bin\**;**\obj\**;**\node_modules\**;**\dist\**" />
+        <Content Include="AspNet.RazorPages.Vite\**\*" Exclude="**\bin\**;**\obj\**;**\node_modules\**;**\dist\**" />
+        <Content Include="AspNet.RazorPages.Webpack\**\*" Exclude="**\bin\**;**\obj\**;**\node_modules\**;**\dist\**" />
+        <Content Include="AspNet.RazorPages.Webpack.TypeScript\**\*" Exclude="**\bin\**;**\obj\**;**\node_modules\**;**\dist\**" />
+        <Compile Remove="**\*" />
+    </ItemGroup>
+    
+    <ItemGroup>
+        <None Include="README.md" Pack="true" PackagePath="" />
+    </ItemGroup>
 
 </Project>
