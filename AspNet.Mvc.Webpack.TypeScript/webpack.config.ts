@@ -5,6 +5,7 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { WebpackAssetsManifest } from 'webpack-assets-manifest';
 import CssMinimizerPlugin from 'css-minimizer-webpack-plugin';
 import TsconfigPathsPlugin from "tsconfig-paths-webpack-plugin";
+import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin";
 import { webpackConfig } from 'aspnet-buildtools';
 
 export default {
@@ -47,6 +48,7 @@ export default {
     }),
     // Generate manifest for use with AssetManager.
     new WebpackAssetsManifest(),
+    new ForkTsCheckerWebpackPlugin(),
   ],
   devServer: {
     headers: {
