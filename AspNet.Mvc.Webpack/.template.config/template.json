@@ -7,7 +7,7 @@
     "Webpack"
   ],
   "identity": "AspNet.Mvc.Webpack",
-  "name": "ASP.NET Core MVC with Webpack",
+  "name": "ASP.NET MVC with Webpack",
   "shortName": "mvcwebpack",
   "sourceName":"AspNet.Mvc.Webpack",
   "tags": {

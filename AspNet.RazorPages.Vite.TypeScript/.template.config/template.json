@@ -8,8 +8,8 @@
     "TypeScript"
   ],
   "identity": "AspNet.RazorPages.Vite.TypeScript",
-  "name": "ASP.NET Core Razor Pages with Vite and TypeScript",
-  "shortName": "razorvitetypescript",
+  "name": "ASP.NET Razor Pages with Vite and TypeScript",
+  "shortName": "razorvitets",
   "sourceName":"AspNet.RazorPages.Vite.TypeScript",
   "tags": {
     "language": "C#",

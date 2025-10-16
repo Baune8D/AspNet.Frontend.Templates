@@ -7,7 +7,7 @@
     "Vite"
   ],
   "identity": "AspNet.RazorPages.Vite",
-  "name": "ASP.NET Core Razor Pages with Vite",
+  "name": "ASP.NET Razor Pages with Vite",
   "shortName": "razorvite",
   "sourceName":"AspNet.RazorPages.Vite",
   "tags": {

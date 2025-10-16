@@ -8,8 +8,8 @@
     "TypeScript"
   ],
   "identity": "AspNet.RazorPages.Webpack.TypeScript",
-  "name": "ASP.NET Core Razor Pages with Webpack and TypeScript",
-  "shortName": "razorwebpacktypescript",
+  "name": "ASP.NET Razor Pages with Webpack and TypeScript",
+  "shortName": "razorwebpackts",
   "sourceName":"AspNet.RazorPages.Webpack.TypeScript",
   "tags": {
     "language": "C#",

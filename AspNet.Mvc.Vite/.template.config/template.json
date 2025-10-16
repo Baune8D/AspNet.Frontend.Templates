@@ -7,7 +7,7 @@
     "Vite"
   ],
   "identity": "AspNet.Mvc.Vite",
-  "name": "ASP.NET Core MVC with Vite",
+  "name": "ASP.NET MVC with Vite",
   "shortName": "mvcvite",
   "sourceName":"AspNet.Mvc.Vite",
   "tags": {

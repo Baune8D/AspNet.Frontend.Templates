@@ -8,8 +8,8 @@
     "TypeScript"
   ],
   "identity": "AspNet.Mvc.Vite.TypeScript",
-  "name": "ASP.NET Core MVC with Vite and TypeScript",
-  "shortName": "mvcvitetypescript",
+  "name": "ASP.NET MVC with Vite and TypeScript",
+  "shortName": "mvcvitets",
   "sourceName":"AspNet.Mvc.Vite.TypeScript",
   "tags": {
     "language": "C#",

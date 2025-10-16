@@ -7,7 +7,7 @@
     "Webpack"
   ],
   "identity": "AspNet.RazorPages.Webpack",
-  "name": "ASP.NET Core Razor Pages with Webpack",
+  "name": "ASP.NET Razor Pages with Webpack",
   "shortName": "razorwebpack",
   "sourceName":"AspNet.RazorPages.Webpack",
   "tags": {

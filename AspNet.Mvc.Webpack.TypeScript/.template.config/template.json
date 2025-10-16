@@ -8,8 +8,8 @@
     "TypeScript"
   ],
   "identity": "AspNet.Mvc.Webpack.TypeScript",
-  "name": "ASP.NET Core MVC with Webpack and TypeScript",
-  "shortName": "mvcwebpacktypescript",
+  "name": "ASP.NET MVC with Webpack and TypeScript",
+  "shortName": "mvcwebpackts",
   "sourceName":"AspNet.Mvc.Webpack.TypeScript",
   "tags": {
     "language": "C#",
