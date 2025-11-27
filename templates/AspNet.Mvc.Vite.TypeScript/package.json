@@ -19,7 +19,7 @@
   "devDependencies": {
     "@types/node": "^22.18.10",
     "aspnet-buildtools": "^0.2.6",
-    "vite": "^7.1.10",
+    "vite": "^7.1.11",
     "typescript": "^5.9.3"
   }
 }
