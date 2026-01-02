@@ -44,6 +44,13 @@ class Build : NukeBuild
     
     static IEnumerable<AbsolutePath> Artifacts => ArtifactsDirectory.GlobFiles("*.nupkg");
 
+    protected override void OnBuildInitialized()
+    {
+        base.OnBuildInitialized();
+
+        Environment.SetEnvironmentVariable("IGNORE_NORMALISATION_GIT_HEAD_MOVE", "1");
+    }
+    
     // ReSharper disable once UnusedMember.Local
     Target Clean => _ => _
         .Executes(() =>
