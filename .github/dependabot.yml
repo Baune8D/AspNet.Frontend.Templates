@@ -9,6 +9,8 @@ updates:
     ignore:
       - dependency-name: "*"
         update-types: ["version-update:semver-major"]
+      - dependency-name: "fork-ts-checker-webpack-plugin"
+        update-types: [ "version-update:semver-major", "version-update:semver-minor" ]
     groups:
       dependencies:
         patterns:
