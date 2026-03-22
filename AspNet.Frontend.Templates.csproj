@@ -9,7 +9,7 @@
     <PackageTags>MVC;Razor Pages;Vite;Webpack</PackageTags>
     <PackageProjectUrl>https://github.com/Baune8D/AspNet.Frontend.Templates</PackageProjectUrl>
     <PackageType>Template</PackageType>
-    <TargetFramework>net9.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <IncludeContentInPack>true</IncludeContentInPack>
     <IncludeBuildOutput>false</IncludeBuildOutput>
     <ContentTargetFolders>content</ContentTargetFolders>
