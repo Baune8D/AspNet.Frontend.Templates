@@ -74,6 +74,7 @@ class Build : NukeBuild
             ArtifactsDirectory.CreateOrCleanDirectory();
 
             DotNetPack(s => s
+                .SetProcessWorkingDirectory(Solution.Directory)
                 .SetProject("AspNet.Frontend.Templates.csproj")
                 .SetAssemblyVersion(GitVersion.AssemblySemVer)
                 .SetFileVersion(GitVersion.AssemblySemFileVer)
