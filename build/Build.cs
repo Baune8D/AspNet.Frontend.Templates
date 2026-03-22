@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using Nuke.Common;
@@ -88,12 +87,13 @@ class Build : NukeBuild
         .OnlyWhenStatic(() => IsServerBuild && GitRepository.IsOnMainBranch())
         .Executes(() =>
         {
-            DotNetNuGetPush(s => s
-                .SetSource("https://www.myget.org/F/baunegaard/api/v2/package")
-                .SetApiKey(MyGetApiKey)
-                .CombineWith(Artifacts, (ss, artifact) => ss
-                    .SetTargetPath(artifact)),
-                degreeOfParallelism: Environment.ProcessorCount);
+            foreach (var artifact in Artifacts)
+            {
+                DotNetNuGetPush(s => s
+                    .SetTargetPath(artifact)
+                    .SetSource("https://www.myget.org/F/baunegaard/api/v2/package")
+                    .SetApiKey(MyGetApiKey));
+            }
         });
 
     Target PushNuGet => _ => _
@@ -101,11 +101,12 @@ class Build : NukeBuild
         .OnlyWhenStatic(() => IsServerBuild && GitHubActions.RefType == "tag")
         .Executes(() =>
         {
-            DotNetNuGetPush(s => s
-                .SetSource("https://api.nuget.org/v3/index.json")
-                .SetApiKey(NuGetApiKey)
-                .CombineWith(Artifacts, (ss, artifact) => ss
-                    .SetTargetPath(artifact)),
-                degreeOfParallelism: Environment.ProcessorCount);
+            foreach (var artifact in Artifacts)
+            {
+                DotNetNuGetPush(s => s
+                    .SetTargetPath(artifact)
+                    .SetSource("https://api.nuget.org/v3/index.json")
+                    .SetApiKey(NuGetApiKey));
+            }
         });
 }
