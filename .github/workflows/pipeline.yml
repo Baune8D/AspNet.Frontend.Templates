@@ -10,6 +10,7 @@ on:
 
 env:
   DOTNET_VERSION: '10.0.x'
+  NODE_VERSION: '24.x'
 
 jobs:
 
@@ -24,6 +25,12 @@ jobs:
         uses: actions/setup-dotnet@v5
         with:
           dotnet-version: ${{ env.DOTNET_VERSION }}
+      - name: Use Node.js ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v6
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+          cache-dependency-path: '**/package-lock.json'
       - name: Execute NUKE
         run: ./build.cmd PushNuGet PushMyGet
         env:
