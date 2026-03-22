@@ -8,7 +8,9 @@
     <File Path="NuGet.Config" />
     <File Path="README.md" />
   </Folder>
-  <Folder Name="/Solution Items/.github/" />
+  <Folder Name="/Solution Items/.github/">
+    <File Path=".github\dependabot.yml" />
+  </Folder>
   <Folder Name="/Solution Items/.github/workflows/">
     <File Path=".github/workflows/pipeline.yml" />
   </Folder>
