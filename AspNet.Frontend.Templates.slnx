@@ -1,0 +1,27 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+    <File Path=".gitignore" />
+    <File Path="AspNet.Frontend.Templates.csproj" />
+    <File Path="GitVersion.yml" />
+    <File Path="LICENSE.txt" />
+    <File Path="NuGet.Config" />
+    <File Path="README.md" />
+  </Folder>
+  <Folder Name="/Solution Items/.github/" />
+  <Folder Name="/Solution Items/.github/workflows/">
+    <File Path=".github/workflows/pipeline.yml" />
+  </Folder>
+  <Project Path="build/_build.csproj">
+    <Build Project="false" />
+  </Project>
+  <Project Path="examples/Example.Mvc.Webpack/Example.Mvc.Webpack.csproj" />
+  <Project Path="templates/AspNet.Mvc.Vite.TypeScript/AspNet.Mvc.Vite.TypeScript.csproj" />
+  <Project Path="templates/AspNet.Mvc.Vite/AspNet.Mvc.Vite.csproj" />
+  <Project Path="templates/AspNet.Mvc.Webpack.TypeScript/AspNet.Mvc.Webpack.TypeScript.csproj" />
+  <Project Path="templates/AspNet.Mvc.Webpack/AspNet.Mvc.Webpack.csproj" />
+  <Project Path="templates/AspNet.RazorPages.Vite.TypeScript/AspNet.RazorPages.Vite.TypeScript.csproj" />
+  <Project Path="templates/AspNet.RazorPages.Vite/AspNet.RazorPages.Vite.csproj" />
+  <Project Path="templates/AspNet.RazorPages.Webpack.TypeScript/AspNet.RazorPages.Webpack.TypeScript.csproj" />
+  <Project Path="templates/AspNet.RazorPages.Webpack/AspNet.RazorPages.Webpack.csproj" />
+</Solution>

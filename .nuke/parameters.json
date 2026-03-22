@@ -1,4 +1,4 @@
 {
   "$schema": "./build.schema.json",
-  "Solution": "AspNet.Frontend.Templates.sln"
+  "Solution": "AspNet.Frontend.Templates.slnx"
 }
