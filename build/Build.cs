@@ -51,6 +51,9 @@ class Build : NukeBuild
                 .ForEach(project => DotNetBuild(s => s
                     .SetProjectFile(project)
                     .SetConfiguration("Release")
+                    .SetAssemblyVersion(GitVersion.AssemblySemVer)
+                    .SetFileVersion(GitVersion.AssemblySemFileVer)
+                    .SetInformationalVersion(GitVersion.InformationalVersion)
                     .EnableTreatWarningsAsErrors()));
             
             templates.GlobFiles("*/package.json")
