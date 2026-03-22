@@ -1,8 +1,9 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using Nuke.Common;
 using Nuke.Common.CI;
-using Nuke.Common.CI.AppVeyor;
+using Nuke.Common.CI.GitHubActions;
 using Nuke.Common.Git;
 using Nuke.Common.IO;
 using Nuke.Common.ProjectModel;
@@ -10,24 +11,11 @@ using Nuke.Common.Tooling;
 using Nuke.Common.Tools.DotNet;
 using Nuke.Common.Tools.GitVersion;
 using Nuke.Common.Tools.Npm;
-using Nuke.Common.Tools.NuGet;
 using Nuke.Common.Utilities.Collections;
 using static Nuke.Common.Tools.DotNet.DotNetTasks;
 using static Nuke.Common.Tools.Npm.NpmTasks;
-using static Nuke.Common.Tools.NuGet.NuGetTasks;
 
-// ReSharper disable AllUnderscoreLocalParameterName
-
-[ShutdownDotNetAfterServerBuild]
-[AppVeyor(
-    AppVeyorImage.VisualStudio2022,
-    InvokedTargets =
-    [
-        nameof(PushNuGet),
-        nameof(PushMyGet),
-    ])]
-[AppVeyorSecret("MYGET_API_KEY", "78qy8e6pKfJlQV7RAG5tJOWegzXpjASkUs3aFdVBoPYA5gi6+mWdjbuAmNa5OQPe")]
-[AppVeyorSecret("NUGET_API_KEY", "aMbj+EdePo74elFCi6lrQZcO81mru5j8cqD5FxGoDBWgXFFHwok/z4B+BtS4H1Sw")]
+[SuppressMessage("ReSharper", "UnusedMember.Local")]
 class Build : NukeBuild
 {
     public static int Main () => Execute<Build>(x => x.Package);
@@ -38,18 +26,11 @@ class Build : NukeBuild
     [Solution] readonly Solution Solution;
     [GitRepository] readonly GitRepository GitRepository;
     [GitVersion] readonly GitVersion GitVersion;
-    [CI] readonly AppVeyor AppVeyor;
+    [CI] readonly GitHubActions GitHubActions;
 
     static AbsolutePath ArtifactsDirectory => RootDirectory / "artifacts";
     
     static IEnumerable<AbsolutePath> Artifacts => ArtifactsDirectory.GlobFiles("*.nupkg");
-
-    protected override void OnBuildInitialized()
-    {
-        base.OnBuildInitialized();
-
-        Environment.SetEnvironmentVariable("IGNORE_NORMALISATION_GIT_HEAD_MOVE", "1");
-    }
     
     // ReSharper disable once UnusedMember.Local
     Target Clean => _ => _
@@ -106,7 +87,7 @@ class Build : NukeBuild
         .OnlyWhenStatic(() => IsServerBuild && GitRepository.IsOnMainBranch())
         .Executes(() =>
         {
-            NuGetPush(s => s
+            DotNetNuGetPush(s => s
                 .SetSource("https://www.myget.org/F/baunegaard/api/v2/package")
                 .SetApiKey(MyGetApiKey)
                 .CombineWith(Artifacts, (ss, artifact) => ss
@@ -116,10 +97,10 @@ class Build : NukeBuild
 
     Target PushNuGet => _ => _
         .DependsOn(Package)
-        .OnlyWhenStatic(() => IsServerBuild && AppVeyor.RepositoryTag)
+        .OnlyWhenStatic(() => IsServerBuild && GitHubActions.RefType == "tag")
         .Executes(() =>
         {
-            NuGetPush(s => s
+            DotNetNuGetPush(s => s
                 .SetSource("https://api.nuget.org/v3/index.json")
                 .SetApiKey(NuGetApiKey)
                 .CombineWith(Artifacts, (ss, artifact) => ss

@@ -7,7 +7,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 		.gitignore = .gitignore
-		appveyor.yml = appveyor.yml
 		AspNet.Frontend.Templates.csproj = AspNet.Frontend.Templates.csproj
 		GitVersion.yml = GitVersion.yml
 		LICENSE.txt = LICENSE.txt
@@ -34,6 +33,13 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNet.RazorPages.Webpack.TypeScript", "templates\AspNet.RazorPages.Webpack.TypeScript\AspNet.RazorPages.Webpack.TypeScript.csproj", "{6F5E1CB9-73E4-4D4C-8D61-90653FE51458}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example.Mvc.Webpack", "examples\Example.Mvc.Webpack\Example.Mvc.Webpack.csproj", "{C45CD048-E961-4513-90F2-3D4174A63BC0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{A40C3960-A066-4D46-9F43-92C2A3EA73C3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{DB3C1D6E-F265-4549-9F95-465F10942319}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\pipeline.yml = .github\workflows\pipeline.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -84,6 +90,8 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{A40C3960-A066-4D46-9F43-92C2A3EA73C3} = {D39E1952-E99E-4E3E-89CD-5E29CFAE13BC}
+		{DB3C1D6E-F265-4549-9F95-465F10942319} = {A40C3960-A066-4D46-9F43-92C2A3EA73C3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F9D835CA-9061-4B3D-A660-48CFBFBDC7F1}
