@@ -2,7 +2,6 @@
 
   <PropertyGroup>
     <PackageId>AspNet.Frontend.Templates</PackageId>
-    <PackageVersion>1.0</PackageVersion>
     <Title>ASP.NET Frontend Templates</Title>
     <Authors>Baune8D</Authors>
     <Description>ASP.NET templates for modern frontend build tools</Description>
