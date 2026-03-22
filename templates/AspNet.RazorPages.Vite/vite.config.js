@@ -7,8 +7,8 @@ export default defineConfig({
     assetsDir: '',
     manifest: 'assets-manifest.json',
     outDir: 'wwwroot/dist',
-    rollupOptions: {
-      ...viteConfig.build.rollupOptions,
+    rolldownOptions: {
+      ...viteConfig.build.rolldownOptions,
     },
   },
   server: {

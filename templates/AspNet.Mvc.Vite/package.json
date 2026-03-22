@@ -12,12 +12,12 @@
   "type": "module",
   "dependencies": {
     "bootstrap": "^5.3.8",
-    "jquery": "^3.7.1",
-    "jquery-validation": "^1.21.0",
+    "jquery": "^4.0.0",
+    "jquery-validation": "^1.22.1",
     "jquery-validation-unobtrusive": "^4.0.0"
   },
   "devDependencies": {
-    "aspnet-buildtools": "^0.2.6",
-    "vite": "^7.1.11"
+    "aspnet-buildtools": "^0.3.1",
+    "vite": "^8.0.1"
   }
 }
