@@ -13,5 +13,6 @@ updates:
         update-types: [ "version-update:semver-major", "version-update:semver-minor" ]
     groups:
       dependencies:
+        group-by: dependency-name
         patterns:
           - "*"
