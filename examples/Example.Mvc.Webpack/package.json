@@ -25,7 +25,7 @@
     "fork-ts-checker-webpack-plugin": "~9.0.3",
     "mini-css-extract-plugin": "^2.10.2",
     "sass": "^1.99.0",
-    "sass-loader": "^16.0.7",
+    "sass-loader": "^16.0.8",
     "ts-loader": "^9.5.7",
     "ts-node": "^10.9.2",
     "tsconfig-paths-webpack-plugin": "^4.2.0",
