@@ -28,6 +28,7 @@ class Build : NukeBuild
     [CI] readonly GitHubActions GitHubActions;
 
     static AbsolutePath ArtifactsDirectory => RootDirectory / "artifacts";
+    static AbsolutePath TemplatesDirectory => RootDirectory / "templates";
     
     static IEnumerable<AbsolutePath> Artifacts => ArtifactsDirectory.GlobFiles("*.nupkg");
     
@@ -45,9 +46,7 @@ class Build : NukeBuild
     Target Test => _ => _
         .Executes(() =>
         {
-            var templates = RootDirectory / "templates";
-            
-            templates.GlobFiles("*/*.csproj")
+            TemplatesDirectory.GlobFiles("*/*.csproj")
                 .ForEach(project => DotNetBuild(s => s
                     .SetProjectFile(project)
                     .SetConfiguration("Release")
@@ -56,7 +55,7 @@ class Build : NukeBuild
                     .SetInformationalVersion(GitVersion.InformationalVersion)
                     .EnableTreatWarningsAsErrors()));
             
-            templates.GlobFiles("*/package.json")
+            TemplatesDirectory.GlobFiles("*/package.json")
                 .ForEach(project =>
                 {
                     NpmInstall(s => s
@@ -76,7 +75,7 @@ class Build : NukeBuild
             ArtifactsDirectory.CreateOrCleanDirectory();
 
             DotNetPack(s => s
-                .SetProcessWorkingDirectory(Solution.Directory)
+                .SetProcessWorkingDirectory(TemplatesDirectory)
                 .SetProject("AspNet.Frontend.Templates.csproj")
                 .SetAssemblyVersion(GitVersion.AssemblySemVer)
                 .SetFileVersion(GitVersion.AssemblySemFileVer)

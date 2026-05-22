@@ -2,7 +2,6 @@
   <Folder Name="/Solution Items/">
     <File Path=".editorconfig" />
     <File Path=".gitignore" />
-    <File Path="AspNet.Frontend.Templates.csproj" />
     <File Path="GitVersion.yml" />
     <File Path="LICENSE.txt" />
     <File Path="NuGet.Config" />
@@ -13,6 +12,9 @@
   </Folder>
   <Folder Name="/Solution Items/.github/workflows/">
     <File Path=".github/workflows/pipeline.yml" />
+  </Folder>
+  <Folder Name="/Solution Items/templates/">
+    <File Path="templates\AspNet.Frontend.Templates.csproj" />
   </Folder>
   <Project Path="build/_build.csproj">
     <Build Project="false" />
