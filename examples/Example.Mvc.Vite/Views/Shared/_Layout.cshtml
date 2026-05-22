@@ -4,7 +4,9 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>@ViewData["Title"] - Example.Mvc.Vite</title>
-    <link-bundle name="Vendor" />
+    <environment include="Development">
+        <script src="http://localhost:5173/@@vite/client" type="module"></script>
+    </environment>
     <link-bundle fallback="Layout" />
 </head>
 <body>
@@ -40,8 +42,7 @@
         &copy; 2025 - Example.Mvc.Vite - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
     </div>
 </footer>
-<script-bundle name="Vendor" defer />
-<script-bundle fallback="Layout" defer />
+<script-bundle fallback="Layout" />
 @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
