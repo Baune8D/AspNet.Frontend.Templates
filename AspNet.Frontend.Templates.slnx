@@ -13,6 +13,9 @@
   <Folder Name="/Solution Items/.github/workflows/">
     <File Path=".github/workflows/pipeline.yml" />
   </Folder>
+  <Folder Name="/Solution Items/scripts/">
+    <File Path="scripts\install.sh" />
+  </Folder>
   <Folder Name="/Solution Items/templates/">
     <File Path="templates\AspNet.Frontend.Templates.csproj" />
   </Folder>
