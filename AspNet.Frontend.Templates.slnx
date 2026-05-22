@@ -17,6 +17,7 @@
   <Project Path="build/_build.csproj">
     <Build Project="false" />
   </Project>
+  <Project Path="examples/Example.Mvc.Vite/Example.Mvc.Vite.csproj" />
   <Project Path="examples/Example.Mvc.Webpack/Example.Mvc.Webpack.csproj" />
   <Project Path="templates/AspNet.Mvc.Vite.TypeScript/AspNet.Mvc.Vite.TypeScript.csproj" />
   <Project Path="templates/AspNet.Mvc.Vite/AspNet.Mvc.Vite.csproj" />

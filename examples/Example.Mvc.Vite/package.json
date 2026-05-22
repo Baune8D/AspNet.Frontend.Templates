@@ -1,0 +1,27 @@
+{
+  "version": "1.0.0",
+  "name": "example-mvc-vite",
+  "description": "This project is a template for using ASP.NET MVC with Vite and TypeScript.",
+  "private": true,
+  "scripts": {
+    "build": "tsc && vite build",
+    "start": "vite"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "bootstrap": "^5.3.8",
+    "jquery": "^4.0.0",
+    "jquery-validation": "^1.22.1",
+    "jquery-validation-unobtrusive": "^4.0.0",
+    "sweetalert2": "^11.26.24"
+  },
+  "devDependencies": {
+    "@types/node": "^24.12.0",
+    "aspnet-buildtools": "^0.3.1",
+    "sass-embedded": "^1.100.0",
+    "typescript": "^5.9.3",
+    "vite": "^8.0.1"
+  }
+}
