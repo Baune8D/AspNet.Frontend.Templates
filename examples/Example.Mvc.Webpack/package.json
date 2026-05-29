@@ -13,7 +13,7 @@
   "dependencies": {
     "bootstrap": "^5.3.8",
     "jquery": "^4.0.0",
-    "sweetalert2": "^11.26.24"
+    "sweetalert2": "^11.26.25"
   },
   "devDependencies": {
     "@types/node": "^24.12.4",
