@@ -15,7 +15,7 @@
     "jquery": "^4.0.0",
     "jquery-validation": "^1.22.1",
     "jquery-validation-unobtrusive": "^4.0.0",
-    "sweetalert2": "^11.26.24"
+    "sweetalert2": "^11.26.25"
   },
   "devDependencies": {
     "@types/node": "^24.12.0",
