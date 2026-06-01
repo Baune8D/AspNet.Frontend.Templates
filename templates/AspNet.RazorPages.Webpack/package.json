@@ -23,7 +23,7 @@
     "mini-css-extract-plugin": "^2.10.2",
     "webpack": "^5.107.2",
     "webpack-assets-manifest": "^6.5.1",
-    "webpack-cli": "^7.0.2",
+    "webpack-cli": "^7.0.3",
     "webpack-dev-server": "^5.2.4"
   }
 }
