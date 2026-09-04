@@ -18,7 +18,7 @@
   },
   "devDependencies": {
     "aspnet-buildtools": "^0.3.1",
-    "css-loader": "^7.1.4",
+    "css-loader": "^7.1.5",
     "css-minimizer-webpack-plugin": "^8.0.0",
     "mini-css-extract-plugin": "^2.10.2",
     "webpack": "^5.109.2",
