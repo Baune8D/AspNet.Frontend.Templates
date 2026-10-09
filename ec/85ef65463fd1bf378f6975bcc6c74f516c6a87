@@ -1,0 +1,19 @@
+README.md
+  s_85e396d20e191d::t_adb875b9c282cd 76-93
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "ec85ef65463fd1bf378f6975bcc6c74f516c6a87",
+  "prompts": {},
+  "sessions": {
+    "s_85e396d20e191d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "s_85e396d20e191d",
+        "model": "unknown"
+      },
+      "human_author": "Morten Larsen <mortenl41@gmail.com>"
+    }
+  }
+}
