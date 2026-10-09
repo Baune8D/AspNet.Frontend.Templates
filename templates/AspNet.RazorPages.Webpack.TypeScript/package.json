@@ -17,9 +17,9 @@
     "jquery-validation-unobtrusive": "^4.0.0"
   },
   "devDependencies": {
-    "@types/node": "^24.19.1",
+    "@types/node": "^24.19.2",
     "@types/webpack": "^5.28.5",
-    "aspnet-buildtools": "^0.3.1",
+    "aspnet-buildtools": "^0.3.2",
     "cross-env": "^10.1.0",
     "css-loader": "^7.1.5",
     "css-minimizer-webpack-plugin": "^8.0.0",
@@ -32,6 +32,6 @@
     "webpack": "^5.111.1",
     "webpack-assets-manifest": "^6.5.4",
     "webpack-cli": "^7.2.3",
-    "webpack-dev-server": "^5.2.6"
+    "webpack-dev-server": "^6.0.0"
   }
 }

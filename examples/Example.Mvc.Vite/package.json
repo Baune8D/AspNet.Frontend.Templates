@@ -18,10 +18,10 @@
     "sweetalert2": "^11.26.25"
   },
   "devDependencies": {
-    "@types/node": "^24.19.1",
-    "aspnet-buildtools": "^0.3.1",
+    "@types/node": "^24.19.2",
+    "aspnet-buildtools": "^0.3.2",
     "sass-embedded": "^1.105.1",
     "typescript": "^5.9.3",
-    "vite": "^8.3.2"
+    "vite": "^8.3.4"
   }
 }
