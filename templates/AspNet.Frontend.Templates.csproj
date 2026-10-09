@@ -4,9 +4,13 @@
     <PackageId>AspNet.Frontend.Templates</PackageId>
     <Title>ASP.NET Frontend Templates</Title>
     <Authors>Baune8D</Authors>
-    <Description>ASP.NET templates for modern frontend build tools</Description>
-    <PackageTags>MVC;Razor Pages;Vite;Webpack</PackageTags>
+    <Description>dotnet new templates for ASP.NET Core MVC and Razor Pages with Vite or Webpack, in JavaScript or TypeScript. Per-view bundles, hot reload in development and hashed assets in production.</Description>
+    <PackageTags>dotnet-new;templates;aspnetcore;mvc;razor-pages;vite;webpack;typescript;frontend</PackageTags>
     <PackageProjectUrl>https://github.com/Baune8D/AspNet.Frontend.Templates</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Baune8D/AspNet.Frontend.Templates</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReleaseNotes>https://github.com/Baune8D/AspNet.Frontend.Templates/releases</PackageReleaseNotes>
     <PackageType>Template</PackageType>
     <TargetFramework>net10.0</TargetFramework>
     <IncludeContentInPack>true</IncludeContentInPack>

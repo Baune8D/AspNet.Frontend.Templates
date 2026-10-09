@@ -1,46 +1,101 @@
 # AspNet.Frontend.Templates
 
-This project contains minimal templates for using ASP.NET Core with modern frontend build tools.  
+[![Build](https://github.com/Baune8D/AspNet.Frontend.Templates/actions/workflows/pipeline.yml/badge.svg?branch=main)](https://github.com/Baune8D/AspNet.Frontend.Templates/actions/workflows/pipeline.yml)
+[![NuGet Version](https://img.shields.io/nuget/v/AspNet.Frontend.Templates)](https://www.nuget.org/packages/AspNet.Frontend.Templates)
+[![NuGet Downloads](https://img.shields.io/nuget/dt/AspNet.Frontend.Templates)](https://www.nuget.org/packages/AspNet.Frontend.Templates)
+[![License: MIT](https://img.shields.io/github/license/Baune8D/AspNet.Frontend.Templates)](https://github.com/Baune8D/AspNet.Frontend.Templates/blob/main/LICENSE.txt)
 
-It is built upon the original ASP.NET Core templates and can be customized any way you want.
+**`dotnet new` templates for ASP.NET Core MVC and Razor Pages with Vite or Webpack.** Each template is the standard ASP.NET Core template with its frontend moved to a modern bundler: per-view bundles, hot reload in development, and hashed assets in production.
 
-Additional related repos:
-* [AspNet.AssetManager](https://github.com/Baune8D/AspNet.AssetManager) - C# code for working with the generated assets. **See for more documentation.**
-* [aspnet-buildtools](https://github.com/Baune8D/aspnet-buildtools) - NPM package that helps with build tool configuration. **See for more documentation**
+```bash
+dotnet new install AspNet.Frontend.Templates
+dotnet new mvcvite -o MyApp
+```
+
+## Templates
+
+| Template | Short name | Bundler | Language |
+| --- | --- | --- | --- |
+| ASP.NET MVC with Vite | `mvcvite` | Vite | JavaScript |
+| ASP.NET MVC with Vite and TypeScript | `mvcvitets` | Vite | TypeScript |
+| ASP.NET MVC with Webpack | `mvcwebpack` | Webpack | JavaScript |
+| ASP.NET MVC with Webpack and TypeScript | `mvcwebpackts` | Webpack | TypeScript |
+| ASP.NET Razor Pages with Vite | `razorvite` | Vite | JavaScript |
+| ASP.NET Razor Pages with Vite and TypeScript | `razorvitets` | Vite | TypeScript |
+| ASP.NET Razor Pages with Webpack | `razorwebpack` | Webpack | JavaScript |
+| ASP.NET Razor Pages with Webpack and TypeScript | `razorwebpackts` | Webpack | TypeScript |
+
+All templates target .NET 10 and include Bootstrap, jQuery and jQuery Validation, like the standard templates.
+
+## Requirements
+
+- .NET 10 SDK
+- Node.js 22.15 or later
 
 ## Quick start
 
-1. `dotnet new install AspNet.Frontend.Templates` (Install templates)
-2. `mkdir my-project && cd my-project` (Create project folder)
-3. `dotnet new mvcwebpackts` (Scaffold: ASP.NET MVC with Webpack and TypeScript)
-4. `npm install` (Install npm dependencies)
-5. `npm start` (Start development server)
-6. `dotnet run` (Run project)
+```bash
+dotnet new install AspNet.Frontend.Templates
+dotnet new mvcvite -o MyApp
+cd MyApp
+npm install
+npm start      # starts the Vite or Webpack dev server
+dotnet run     # in a second terminal
+```
+
+`npm start` runs the dev server with hot reload (Vite on port 5173, Webpack on port 9000). `npm run build` writes production assets to `wwwroot/dist`.
 
 ## How it works
 
-View-specific bundles are automatically created for each `.cshtml` file with a corresponding `.cshtml.{js,ts}` file in the same path.  
+The templates use two packages that work together:
 
-**Bundles will not be generated for partial views and view components.**
+- [aspnet-buildtools](https://github.com/Baune8D/aspnet-buildtools) configures Vite or Webpack: it creates an entry point for each view that has a script file next to it.
+- [AspNet.AssetManager](https://github.com/Baune8D/AspNet.AssetManager) reads the bundler's manifest and renders the `<script>` and `<link>` tags in your views, from the dev server in development and from `wwwroot/dist` in production.
 
-Bundles can also be created manually by creating a file using a `.bundle.{js,ts}` suffix anywhere in the project.  
-**Note:** The `.bundle` part will be stripped of the resulting bundle name.
+### Bundles
 
-The `_Layout.cshtml` view is configured to automatically include a view-specific bundle if it exists.
-If not, the `Layout` bundle in `Assets/bundles` will be loaded instead (See `AspNet.AssetManager` for documentation).
+| File | Bundle |
+| --- | --- |
+| `Views/Home/Index.cshtml.js` (or `.ts`) next to `Views/Home/Index.cshtml` | `Views_Home_Index` |
+| `Pages/Privacy.cshtml.js` (or `.ts`) next to `Pages/Privacy.cshtml` | `Pages_Privacy` |
+| `Assets/bundles/Layout.bundle.js` (or `.ts`), anywhere in the project | `Layout` |
 
-Import aliases are automatically configured so the project root can be resolved using: `@/`.  
-If using areas, they are also automatically aliased using: `@<area>/`.
+- `_Layout.cshtml` renders the bundle for the current view, and falls back to the `Layout` bundle if the view has none:
 
-Start development server with hot-reload using `npm start` script in project folder.  
-Build production assets using `npm run build` script in project folder.
+  ```cshtml
+  <link-bundle fallback="Layout" />
+  <script-bundle fallback="Layout" />
+  ```
 
-See the extended sample project here: [Example.Mvc.Webpack](https://github.com/Baune8D/AspNet.Frontend.Templates/tree/main/examples/Example.Mvc.Webpack)
+- Partial views (`_*.cshtml`) and view components do not get bundles.
+- The `ValidationScripts` bundle contains jQuery Validation. Add `<script-bundle name="ValidationScripts" />` to pages with forms.
+
+### Import aliases
+
+- `@/` resolves to the project root, e.g. `import '@/Assets/css/site.css'`.
+- In the JavaScript templates, each area also gets an alias: `@<Area>/` resolves to `Areas/<Area>/`.
+- In the TypeScript templates, TypeScript only knows the aliases in `paths` in `tsconfig.json`, which defines `@/`. Add an entry there for each area alias you use. The Webpack TypeScript templates also resolve aliases from `tsconfig.json` only.
+
+## Examples
+
+Example projects with more configuration:
+
+- [Example.Mvc.Vite](https://github.com/Baune8D/AspNet.Frontend.Templates/tree/main/examples/Example.Mvc.Vite): TypeScript, Sass and a view-specific bundle.
+- [Example.Mvc.Webpack](https://github.com/Baune8D/AspNet.Frontend.Templates/tree/main/examples/Example.Mvc.Webpack): TypeScript, Sass, a view-specific bundle and a separate `Vendor` bundle for `node_modules`.
 
 ## Notes
 
-#### Webpack:
-  * When adding new entry points, the dev-server will need to be restarted to pick them up.
+- **Webpack:** restart the dev server after adding a new entry point.
+- **Vite:** in development, CSS is injected by JavaScript, so pages briefly render without styles. Production builds use normal `<link>` tags.
 
-#### Vite:
-  * Dev server does not support extracting CSS files, so you will see a flash of unstyled content.
+## Developing the templates
+
+```bash
+./build.sh            # builds every template and its frontend, then packs the NuGet package
+```
+
+`scripts/install.sh` packs the templates from source and installs them locally. Run it from the `scripts` folder.
+
+## License
+
+[MIT](https://github.com/Baune8D/AspNet.Frontend.Templates/blob/main/LICENSE.txt)
