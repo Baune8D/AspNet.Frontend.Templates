@@ -17,7 +17,7 @@
     "jquery-validation-unobtrusive": "^4.0.0"
   },
   "devDependencies": {
-    "@types/node": "^24.19.0",
+    "@types/node": "^24.19.1",
     "aspnet-buildtools": "^0.3.1",
     "vite": "^8.3.1",
     "typescript": "^5.9.3"
