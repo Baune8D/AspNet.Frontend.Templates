@@ -16,3 +16,28 @@ updates:
         group-by: dependency-name
         patterns:
           - "*"
+
+  - package-ecosystem: "nuget"
+    directories:
+      - "/build"
+      - "/examples/*"
+      - "/templates/*"
+    schedule:
+      interval: "weekly"
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
+    groups:
+      dependencies:
+        group-by: dependency-name
+        patterns:
+          - "*"
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    groups:
+      github-actions:
+        patterns:
+          - "*"
