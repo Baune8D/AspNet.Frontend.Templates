@@ -30,7 +30,7 @@
     "tsconfig-paths-webpack-plugin": "^4.2.0",
     "typescript": "^5.9.3",
     "webpack": "^5.111.1",
-    "webpack-assets-manifest": "^6.5.2",
+    "webpack-assets-manifest": "^6.5.4",
     "webpack-cli": "^7.2.3",
     "webpack-dev-server": "^5.2.6"
   }
