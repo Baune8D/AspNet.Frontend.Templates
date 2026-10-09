@@ -73,8 +73,24 @@ The templates use two packages that work together:
 ### Import aliases
 
 - `@/` resolves to the project root, e.g. `import '@/Assets/css/site.css'`.
-- In the JavaScript templates, each area also gets an alias: `@<Area>/` resolves to `Areas/<Area>/`.
-- In the TypeScript templates, TypeScript only knows the aliases in `paths` in `tsconfig.json`, which defines `@/`. Add an entry there for each area alias you use. The Webpack TypeScript templates also resolve aliases from `tsconfig.json` only.
+- In the JavaScript templates, each area also gets an alias automatically: `@<Area>/` resolves to `Areas/<Area>/`.
+
+#### Areas with TypeScript
+
+In the TypeScript templates, aliases are defined in `paths` in `tsconfig.json`, which only has `@/`. If you add an area, add an alias for it:
+
+```json
+{
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./*"],
+      "@Admin/*": ["./Areas/Admin/*"]
+    }
+  }
+}
+```
+
+TypeScript needs this to type-check the import. The Webpack TypeScript templates also use `paths` to resolve imports.
 
 ## Examples
 
