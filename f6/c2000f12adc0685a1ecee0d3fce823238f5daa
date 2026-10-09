@@ -1,0 +1,57 @@
+examples/Example.Mvc.Vite/package-lock.json
+  s_69f2c8858309b0::t_5991fbe539ff8d 13,823-825
+examples/Example.Mvc.Vite/package.json
+  s_69f2c8858309b0::t_64b6227756640f 15
+examples/Example.Mvc.Webpack/package-lock.json
+  s_69f2c8858309b0::t_a1f46a502602fe 13,3981-3983
+examples/Example.Mvc.Webpack/package.json
+  s_69f2c8858309b0::t_9ce187cc8df85c 15
+templates/AspNet.Mvc.Vite.TypeScript/package-lock.json
+  s_69f2c8858309b0::t_61b1a613899bae 13,434-436
+templates/AspNet.Mvc.Vite.TypeScript/package.json
+  s_69f2c8858309b0::t_004ff8dfde5128 15
+templates/AspNet.Mvc.Vite/package-lock.json
+  s_69f2c8858309b0::t_67375198b84e49 13,422-424
+templates/AspNet.Mvc.Vite/package.json
+  s_69f2c8858309b0::t_ec9b2f59e220f4 15
+templates/AspNet.Mvc.Webpack.TypeScript/package-lock.json
+  s_69f2c8858309b0::t_b046382b4fb2e1 13,3638-3640
+templates/AspNet.Mvc.Webpack.TypeScript/package.json
+  s_69f2c8858309b0::t_4e60fb013ee93f 15
+templates/AspNet.Mvc.Webpack/package-lock.json
+  s_69f2c8858309b0::t_9d337c6f16fc0c 13,3175-3177
+templates/AspNet.Mvc.Webpack/package.json
+  s_69f2c8858309b0::t_06e319a14f2677 15
+templates/AspNet.RazorPages.Vite.TypeScript/package-lock.json
+  s_69f2c8858309b0::t_7e619669dec168 13,434-436
+templates/AspNet.RazorPages.Vite.TypeScript/package.json
+  s_69f2c8858309b0::t_cdf4756f1b257e 15
+templates/AspNet.RazorPages.Vite/package-lock.json
+  s_69f2c8858309b0::t_f4e82635d5aabd 13,422-424
+templates/AspNet.RazorPages.Vite/package.json
+  s_69f2c8858309b0::t_41104e2f73cdd4 15
+templates/AspNet.RazorPages.Webpack.TypeScript/package-lock.json
+  s_69f2c8858309b0::t_c0f5460a3a70be 13,3635-3637
+templates/AspNet.RazorPages.Webpack.TypeScript/package.json
+  s_69f2c8858309b0::t_8e778ec85ea403 15
+templates/AspNet.RazorPages.Webpack/package-lock.json
+  s_69f2c8858309b0::t_f388b5a7945c3a 13,3175-3177
+templates/AspNet.RazorPages.Webpack/package.json
+  s_69f2c8858309b0::t_93751c906c0380 15
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "f6c2000f12adc0685a1ecee0d3fce823238f5daa",
+  "prompts": {},
+  "sessions": {
+    "s_69f2c8858309b0": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e2eaf013-e685-48e9-b88c-54631d8f3648",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Morten Larsen <mortenl41@gmail.com>"
+    }
+  }
+}
