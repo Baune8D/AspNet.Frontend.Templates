@@ -1,43 +1,64 @@
 version: 2
 updates:
-  - package-ecosystem: "npm"
+  - package-ecosystem: npm
     directories:
-      - "/examples/*"
-      - "/templates/*"
+      - /examples/*
+      - /templates/*
     schedule:
-      interval: "weekly"
+      interval: weekly
+      day: monday
+    cooldown:
+      default-days: 7
     ignore:
-      - dependency-name: "*"
-        update-types: ["version-update:semver-major"]
-      - dependency-name: "fork-ts-checker-webpack-plugin"
-        update-types: [ "version-update:semver-major", "version-update:semver-minor" ]
+      # Major versions are updated manually
+      - dependency-name: '*'
+        update-types: [version-update:semver-major]
+      # Keep in line with the default ASP.NET Core templates, which use jQuery 3
+      - dependency-name: jquery
+        update-types: [version-update:semver-major]
+      # Newer versions break stopping the dev server with Ctrl+C (see 0391528)
+      - dependency-name: fork-ts-checker-webpack-plugin
+        update-types: [version-update:semver-minor]
     groups:
-      dependencies:
+      npm:
+        applies-to: version-updates
         group-by: dependency-name
-        patterns:
-          - "*"
+        patterns: ['*']
+      npm-security:
+        applies-to: security-updates
+        patterns: ['*']
 
-  - package-ecosystem: "nuget"
+  - package-ecosystem: nuget
     directories:
-      - "/build"
-      - "/examples/*"
-      - "/templates/*"
+      - /build
+      - /examples/*
+      - /templates/*
     schedule:
-      interval: "weekly"
+      interval: weekly
+      day: monday
+    cooldown:
+      default-days: 7
     ignore:
-      - dependency-name: "*"
-        update-types: ["version-update:semver-major"]
+      # Major versions are updated manually
+      - dependency-name: '*'
+        update-types: [version-update:semver-major]
     groups:
-      dependencies:
+      nuget:
+        applies-to: version-updates
         group-by: dependency-name
-        patterns:
-          - "*"
+        patterns: ['*']
+      nuget-security:
+        applies-to: security-updates
+        patterns: ['*']
 
-  - package-ecosystem: "github-actions"
-    directory: "/"
+  - package-ecosystem: github-actions
+    directory: /
     schedule:
-      interval: "weekly"
+      interval: weekly
+      day: monday
+    cooldown:
+      default-days: 7
     groups:
       github-actions:
-        patterns:
-          - "*"
+        applies-to: version-updates
+        patterns: ['*']
