@@ -1,0 +1,21 @@
+examples/Example.Mvc.Vite/Example.Mvc.Vite.csproj
+  s_69f2c8858309b0::t_704067e99130f7 11
+examples/Example.Mvc.Webpack/Example.Mvc.Webpack.csproj
+  s_69f2c8858309b0::t_2002eaf5e3ec65 11
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "98c52a8eedce25494dc83bc277b4a97b640c11f0",
+  "prompts": {},
+  "sessions": {
+    "s_69f2c8858309b0": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e2eaf013-e685-48e9-b88c-54631d8f3648",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Morten Larsen <mortenl41@gmail.com>"
+    }
+  }
+}
