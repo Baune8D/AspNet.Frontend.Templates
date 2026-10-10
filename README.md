@@ -30,7 +30,7 @@ All templates target .NET 10 and include Bootstrap, jQuery and jQuery Validation
 ## Requirements
 
 - .NET 10 SDK
-- Node.js 22.15 or later
+- Node.js 22.18 or later
 
 ## Quick start
 

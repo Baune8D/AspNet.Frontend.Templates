@@ -72,7 +72,7 @@ Use these sections, omitting empty ones, and end with a compare link:
 ## Template rules
 
 - The templates mirror the default ASP.NET Core templates: Bootstrap, jQuery 3, jQuery Validation and the same page structure.
-- Generated projects require Node.js 22.15+ (webpack-dev-server 6) and the .NET 10 SDK.
+- Generated projects require Node.js 22.18+ and the .NET 10 SDK. The Webpack TypeScript templates need 22.18 because webpack-cli runs `webpack.config.ts` with Node's built-in type stripping (no `ts-node`), so `webpack.config.ts` may only use erasable TypeScript syntax (no enums or namespaces).
 - In the TypeScript templates, aliases come from `paths` in `tsconfig.json`. Area aliases (`@<Area>/`) must be added there; the Webpack TypeScript templates resolve aliases only from `tsconfig.json`.
 - The TypeScript templates target TypeScript 6. Their `tsconfig.json` settings are deliberate:
   - `allowImportingTsExtensions` (with `noEmit`): bundles import `@/Views/Shared/_Layout.cshtml.ts` with the extension, because without it the import would match the Razor file. `ts-loader` still emits with `noEmit`.
@@ -81,7 +81,5 @@ Use these sections, omitting empty ones, and end with a compare link:
 
 ## Held-back dependencies
 
-- **TypeScript 6:** TypeScript 7 has not been evaluated. Check that `ts-loader`, `fork-ts-checker-webpack-plugin` and `ts-node` support it before upgrading.
-- **sass-loader 16:** sass-loader 17 looks for `sass-embedded` in the Webpack example.
-- **fork-ts-checker-webpack-plugin 9.0.x:** newer versions break stopping the dev server with Ctrl+C (see 0391528).
+- **TypeScript 6:** TypeScript 7 has not been evaluated. Check that `ts-loader` and `fork-ts-checker-webpack-plugin` support it before upgrading.
 - **Microsoft.TemplateEngine.Tasks:** pinned to an exact version for reproducible packages. Don't use `Version="*"`.
