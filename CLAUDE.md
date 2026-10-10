@@ -79,6 +79,11 @@ Use these sections, omitting empty ones, and end with a compare link:
   - `strict`: the TypeScript 6 default, set explicitly. Template code must compile with it.
   - Stylesheet imports need type declarations because of `noUncheckedSideEffectImports` (on by default in TypeScript 6): `vite/client` in the Vite templates, `global.d.ts` in the Webpack templates.
 
+## Known workarounds
+
+- **fork-ts-checker-webpack-plugin 9.1** uses chokidar 4, which watches every folder separately on macOS, including `node_modules`. Without `watchOptions: { ignored: /node_modules/ }` in the Webpack TypeScript configs, the dev server takes over 10 seconds to stop on Ctrl+C, and a second Ctrl+C doesn't help ([issue #859](https://github.com/TypeStrong/fork-ts-checker-webpack-plugin/issues/859)). Keep the option until that is fixed.
+- Test Ctrl+C in a real terminal, after type checking has finished ("No typescript errors found."). Sending a signal to a background process does not reproduce the problem.
+
 ## Held-back dependencies
 
 - **TypeScript 6:** TypeScript 7 has not been evaluated. Check that `ts-loader` and `fork-ts-checker-webpack-plugin` support it before upgrading.
