@@ -17,12 +17,14 @@ This repo is one of three that work together:
 
 - Conventional commits (`feat:`, `fix:`, `chore(deps):`, `ci:`, `build:`, `docs:`), one commit per concern, directly on `main`.
 - Only push, tag, publish or edit GitHub releases when asked.
+- Commit messages must be accurate. If one turns out to be wrong before it is pushed, reword it (replay the commits and check that the tree is unchanged). Never rewrite pushed history.
 
 ## Releasing
 
 - **NuGet packages:** push a lightweight tag `vX.Y.Z` on `main`. CI publishes to NuGet on tags. Every push to `main` also publishes a beta to MyGet.
 - **npm package:** `npm version patch -m "%s"`, then `git push origin main --follow-tags`. Publishing needs a 2FA code, so the user runs `npm publish --otp=<code>`.
-- **Verifying:** NuGet takes about 3-6 minutes before a new version can be installed. npm caches package metadata; use `--prefer-online`.
+- **Order:** release aspnet-buildtools or AspNet.AssetManager first, wait until the new version can be installed, then update and release the templates.
+- **Verifying:** NuGet serves a new package for download after about 3 minutes, but `dotnet new install` can take a few minutes longer; clear the cache with `dotnet nuget locals http-cache --clear` and retry. npm caches package metadata; use `--prefer-online`. After publishing, install the package from the registry and build a project that uses it.
 - **Versioning:** any change to a public interface (`IAssetService`, `IManifestService`, `ITagBuilder`, tag helper attributes, exported functions) is breaking and needs a major version. Several 4.x releases of AspNet.AssetManager shipped breaking changes as minor/patch versions; don't repeat that.
 
 ### GitHub release notes
@@ -52,12 +54,20 @@ Use these sections, omitting empty ones, and end with a compare link:
 - Dependabot runs weekly on Monday with a 7-day cooldown. Minor/patch updates are grouped; security updates have their own group.
 - Major versions are ignored by Dependabot and upgraded by hand: read the release notes, update, and build/test before committing. If a major breaks the build and fixing it is a design decision, keep the old major and explain why in the commit.
 - New exceptions go in `.github/dependabot.yml` with a comment explaining why.
+- Before holding a package back, find the root cause and check the package's issue tracker. A failing upgrade is often caused by something else (sass-loader 17 failed because of `ts-node`), and upstream issues often list a workaround (fork-ts-checker-webpack-plugin 9.1).
 - The AspNet.AssetManager demo and the templates mirror the default ASP.NET Core templates, so they stay on jQuery 3 (`jquery-validation-unobtrusive` also requires it).
+
+## Verifying changes
+
+- Reproduce a reported problem the way the user hits it before drawing conclusions: a real terminal, the same command, the same timing. A test that passes in a different setup proves nothing.
+- Test changes that cross repos before publishing: `npm pack` aspnet-buildtools or `dotnet pack` AspNet.AssetManager, install the package into projects generated from the templates (one Vite, one Webpack TypeScript), and build them.
+- Stop dev servers when done, and check that nothing still listens on port 9000 (webpack) or 5173 (Vite), e.g. with `lsof -iTCP:9000 -sTCP:LISTEN`. webpack renames its process to `webpack`, so `pkill -f 'webpack serve'` doesn't match it; stop the process group or the PID instead.
 
 ## Building and testing
 
 - `./build.sh` (default target `Package`) builds every template with warnings as errors, runs `npm install` and `npm run build` in each, and packs the NuGet package to `artifacts/`.
 - `./build.sh` does not cover `examples/`. Build those separately (`npm run build` and `dotnet build`).
+- Also run `npx tsc --noEmit -p .` in each TypeScript project. The bundlers don't report everything `tsc` does; an error in aspnet-buildtools' type declarations only showed up with `tsc`.
 - To test the packed templates without touching the user's installed templates, use a separate template store:
 
   ```bash
