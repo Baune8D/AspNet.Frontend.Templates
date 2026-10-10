@@ -76,7 +76,6 @@ Use these sections, omitting empty ones, and end with a compare link:
 - In the TypeScript templates, aliases come from `paths` in `tsconfig.json`. Area aliases (`@<Area>/`) must be added there; the Webpack TypeScript templates resolve aliases only from `tsconfig.json`.
 - The TypeScript templates target TypeScript 6. Their `tsconfig.json` settings are deliberate:
   - `allowImportingTsExtensions` (with `noEmit`): bundles import `@/Views/Shared/_Layout.cshtml.ts` with the extension, because without it the import would match the Razor file. `ts-loader` still emits with `noEmit`.
-  - `skipLibCheck`: aspnet-buildtools' type declarations reference both Vite and webpack types, and a project only installs one of them.
   - `strict`: the TypeScript 6 default, set explicitly. Template code must compile with it.
   - Stylesheet imports need type declarations because of `noUncheckedSideEffectImports` (on by default in TypeScript 6): `vite/client` in the Vite templates, `global.d.ts` in the Webpack templates.
 
