@@ -1,0 +1,21 @@
+CLAUDE.md
+  s_69f2c8858309b0::t_68779451130a49 75,84
+README.md
+  s_69f2c8858309b0::t_562f1427610bf3 33
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "eccb79f9fb1e38df227e661e97cc4eba71db6515",
+  "prompts": {},
+  "sessions": {
+    "s_69f2c8858309b0": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e2eaf013-e685-48e9-b88c-54631d8f3648",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Morten Larsen <mortenl41@gmail.com>"
+    }
+  }
+}
