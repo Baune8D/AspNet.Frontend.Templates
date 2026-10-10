@@ -1,0 +1,19 @@
+.claude/settings.json
+  s_37fcb75e2725bb::t_517c6f53373e2a 1-18
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "bc4acb652643b94bab9ff8cf268fa0a9c34220d6",
+  "prompts": {},
+  "sessions": {
+    "s_37fcb75e2725bb": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "1d70fb82-c1ee-420a-8b2f-c1e700f1d907",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Morten Larsen <mortenl41@gmail.com>"
+    }
+  }
+}
