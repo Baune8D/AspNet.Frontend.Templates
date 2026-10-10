@@ -1,0 +1,37 @@
+templates/AspNet.Mvc.Webpack.TypeScript/package.json
+  s_69f2c8858309b0::t_720477266a205b 7-8,25
+templates/AspNet.RazorPages.Webpack.TypeScript/package-lock.json
+  s_66ede33de551ca::t_22dc07e8dd4d7c 23,1641-1643,1647,1650,2709-2711,2717,2729,4903-4905,4909-4913
+examples/Example.Mvc.Webpack/package.json
+  s_69f2c8858309b0::t_8a6f27a92c2384 7-8,24,27
+templates/AspNet.Mvc.Webpack.TypeScript/package-lock.json
+  s_66ede33de551ca::t_b9a545ff21e879 23,1655-1657,1661,1664,2712-2714,2720,2732,4906-4908,4912-4916
+examples/Example.Mvc.Webpack/package-lock.json
+  s_69f2c8858309b0::t_a8b8d6901ae501 22,25,1980-1982,1986,1989,3048-3050,3056,3068,5238-5240,5244-5248,5450-5452,5456
+templates/AspNet.RazorPages.Webpack.TypeScript/package.json
+  s_69f2c8858309b0::t_df34f41f54f1cc 7-8,25
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "3732af399bebd63140cbe96be947cee113b796dd",
+  "prompts": {},
+  "sessions": {
+    "s_66ede33de551ca": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c716b126-89f6-4cb1-a1ce-7ed0f2de1180",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Morten Larsen <mortenl41@gmail.com>"
+    },
+    "s_69f2c8858309b0": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e2eaf013-e685-48e9-b88c-54631d8f3648",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Morten Larsen <mortenl41@gmail.com>"
+    }
+  }
+}
