@@ -1,0 +1,63 @@
+examples/Example.Mvc.Vite/Views/Home/Index.cshtml.ts
+  s_69f2c8858309b0::t_2715b8dc33b340 5
+examples/Example.Mvc.Vite/package-lock.json
+  s_69f2c8858309b0::t_05ecb92181d10f 22,1750-1752
+examples/Example.Mvc.Vite/package.json
+  s_69f2c8858309b0::t_ee8f8fe57379aa 24
+examples/Example.Mvc.Vite/tsconfig.json
+  s_69f2c8858309b0::t_bad738a893f1a5 3,7-8,15
+examples/Example.Mvc.Webpack/Views/Home/Index.cshtml.ts
+  s_69f2c8858309b0::t_70bea4ff23fa1e 5
+examples/Example.Mvc.Webpack/global.d.ts
+  s_69f2c8858309b0::t_be2488ab4f19ae 1-3
+examples/Example.Mvc.Webpack/package-lock.json
+  s_69f2c8858309b0::t_bfdc946c9d1e0c 30,6594-6596
+examples/Example.Mvc.Webpack/package.json
+  s_69f2c8858309b0::t_46b3b95583ff72 32
+examples/Example.Mvc.Webpack/tsconfig.json
+  s_69f2c8858309b0::t_68d5f6e10da594 3,6-8,14
+templates/AspNet.Mvc.Vite.TypeScript/package-lock.json
+  s_69f2c8858309b0::t_2220d699bb6fd6 20,902-904
+templates/AspNet.Mvc.Vite.TypeScript/package.json
+  s_69f2c8858309b0::t_a924b379bfa46f 22
+templates/AspNet.Mvc.Vite.TypeScript/tsconfig.json
+  s_69f2c8858309b0::t_1ccccbb04d1bd7 3,7-8,15
+templates/AspNet.Mvc.Webpack.TypeScript/global.d.ts
+  s_69f2c8858309b0::t_d2ed2919e406e9 1-2
+templates/AspNet.Mvc.Webpack.TypeScript/package-lock.json
+  s_69f2c8858309b0::t_09b12a3c24543f 29,6153-6155
+templates/AspNet.Mvc.Webpack.TypeScript/package.json
+  s_69f2c8858309b0::t_5278323939ca46 31
+templates/AspNet.Mvc.Webpack.TypeScript/tsconfig.json
+  s_69f2c8858309b0::t_ce6ff01d952295 3,6-8,14
+templates/AspNet.RazorPages.Vite.TypeScript/package-lock.json
+  s_69f2c8858309b0::t_09c3aed933020d 20,902-904
+templates/AspNet.RazorPages.Vite.TypeScript/package.json
+  s_69f2c8858309b0::t_500d22ec030d23 22
+templates/AspNet.RazorPages.Vite.TypeScript/tsconfig.json
+  s_69f2c8858309b0::t_0e3da6ea2c365b 3,7-8,15
+templates/AspNet.RazorPages.Webpack.TypeScript/global.d.ts
+  s_69f2c8858309b0::t_2fce6b14cb6529 1-2
+templates/AspNet.RazorPages.Webpack.TypeScript/package-lock.json
+  s_69f2c8858309b0::t_f5ed17d65a6677 29,6136-6138
+templates/AspNet.RazorPages.Webpack.TypeScript/package.json
+  s_69f2c8858309b0::t_c5a337dc7dfd75 31
+templates/AspNet.RazorPages.Webpack.TypeScript/tsconfig.json
+  s_69f2c8858309b0::t_14a48074f5b62e 3,6-8,14
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "d275c8a447b7192f0457afd9362692083762af2d",
+  "prompts": {},
+  "sessions": {
+    "s_69f2c8858309b0": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e2eaf013-e685-48e9-b88c-54631d8f3648",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Morten Larsen <mortenl41@gmail.com>"
+    }
+  }
+}
