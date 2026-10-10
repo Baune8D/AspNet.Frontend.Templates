@@ -1,0 +1,37 @@
+examples/Example.Mvc.Vite/Example.Mvc.Vite.csproj
+  s_69f2c8858309b0::t_be4ccaa373bde1 10
+examples/Example.Mvc.Webpack/Example.Mvc.Webpack.csproj
+  s_69f2c8858309b0::t_2f0f91e656e749 10
+templates/AspNet.Mvc.Vite.TypeScript/AspNet.Mvc.Vite.TypeScript.csproj
+  s_69f2c8858309b0::t_8556c38f7e6afe 10
+templates/AspNet.Mvc.Vite/AspNet.Mvc.Vite.csproj
+  s_69f2c8858309b0::t_7eb493a196bd80 10
+templates/AspNet.Mvc.Webpack.TypeScript/AspNet.Mvc.Webpack.TypeScript.csproj
+  s_69f2c8858309b0::t_b27e68c679acfb 10
+templates/AspNet.Mvc.Webpack/AspNet.Mvc.Webpack.csproj
+  s_69f2c8858309b0::t_b11928a2f94fb8 10
+templates/AspNet.RazorPages.Vite.TypeScript/AspNet.RazorPages.Vite.TypeScript.csproj
+  s_69f2c8858309b0::t_6533d818c33327 10
+templates/AspNet.RazorPages.Vite/AspNet.RazorPages.Vite.csproj
+  s_69f2c8858309b0::t_e9c186fb1b75b4 10
+templates/AspNet.RazorPages.Webpack.TypeScript/AspNet.RazorPages.Webpack.TypeScript.csproj
+  s_69f2c8858309b0::t_2ba8153b3b531a 10
+templates/AspNet.RazorPages.Webpack/AspNet.RazorPages.Webpack.csproj
+  s_69f2c8858309b0::t_6fd8ab05c77e64 10
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "ca3a4b2ea3fe33ecac45296624facdc4f768c1fc",
+  "prompts": {},
+  "sessions": {
+    "s_69f2c8858309b0": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e2eaf013-e685-48e9-b88c-54631d8f3648",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Morten Larsen <mortenl41@gmail.com>"
+    }
+  }
+}
