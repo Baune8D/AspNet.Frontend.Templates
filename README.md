@@ -92,6 +92,10 @@ In the TypeScript templates, aliases are defined in `paths` in `tsconfig.json`, 
 
 TypeScript needs this to type-check the import. The Webpack TypeScript templates also use `paths` to resolve imports.
 
+#### Importing other file types with TypeScript
+
+TypeScript checks that every import resolves, including imports of stylesheets. The Vite templates get declarations for stylesheets and other assets from `vite/client`. The Webpack templates declare `*.css` in `global.d.ts`; add a line there for other file types you import, e.g. `declare module '*.scss';`.
+
 ## Examples
 
 Example projects with more configuration:
