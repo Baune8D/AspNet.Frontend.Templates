@@ -81,6 +81,11 @@ export default {
     new WebpackAssetsManifest(),
     new ForkTsCheckerWebpackPlugin(),
   ],
+  watchOptions: {
+    // Watching node_modules makes fork-ts-checker-webpack-plugin 9.1 slow to stop on Ctrl+C.
+    // https://github.com/TypeStrong/fork-ts-checker-webpack-plugin/issues/859
+    ignored: /node_modules/,
+  },
   devServer: {
     headers: {
       'Access-Control-Allow-Origin': '*',
