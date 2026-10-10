@@ -4,7 +4,6 @@
     "module": "Preserve",
     "moduleResolution": "bundler",
     "noEmit": true,
-    "skipLibCheck": true,
     "strict": true,
     "target": "ES6",
     "types": ["vite/client"],
