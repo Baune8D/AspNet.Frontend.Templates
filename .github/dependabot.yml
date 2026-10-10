@@ -16,9 +16,6 @@ updates:
       # Keep in line with the default ASP.NET Core templates, which use jQuery 3
       - dependency-name: jquery
         update-types: [version-update:semver-major]
-      # Newer versions break stopping the dev server with Ctrl+C (see 0391528)
-      - dependency-name: fork-ts-checker-webpack-plugin
-        update-types: [version-update:semver-minor]
     groups:
       npm:
         applies-to: version-updates
