@@ -1,9 +1,11 @@
 {
   "compilerOptions": {
-    "esModuleInterop": true,
+    "allowImportingTsExtensions": true,
     "module": "Preserve",
     "moduleResolution": "bundler",
-    "noImplicitAny": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "strict": true,
     "target": "ES6",
     "paths": {
       "@/*": ["./*"]

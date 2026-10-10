@@ -1,10 +1,11 @@
 {
   "compilerOptions": {
-    "esModuleInterop": true,
+    "allowImportingTsExtensions": true,
     "module": "Preserve",
     "moduleResolution": "bundler",
     "noEmit": true,
-    "noImplicitAny": true,
+    "skipLibCheck": true,
+    "strict": true,
     "target": "ES6",
     "types": ["vite/client"],
     "paths": {
