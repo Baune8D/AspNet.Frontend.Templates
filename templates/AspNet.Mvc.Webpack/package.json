@@ -24,6 +24,6 @@
     "webpack": "^5.112.0",
     "webpack-assets-manifest": "^6.5.4",
     "webpack-cli": "^7.2.3",
-    "webpack-dev-server": "^6.0.0"
+    "webpack-dev-server": "^6.1.0"
   }
 }
