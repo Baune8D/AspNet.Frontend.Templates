@@ -17,7 +17,7 @@
     "jquery-validation-unobtrusive": "^4.0.0"
   },
   "devDependencies": {
-    "aspnet-buildtools": "^0.3.3",
+    "aspnet-buildtools": "^0.3.4",
     "vite": "^8.3.5"
   }
 }
