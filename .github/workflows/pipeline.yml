@@ -9,7 +9,6 @@ on:
       - 'v*'
 
 env:
-  DOTNET_VERSION: '10.0.x'
   NODE_VERSION: '24.x'
 
 jobs:
@@ -24,10 +23,10 @@ jobs:
         uses: actions/checkout@v7
         with:
           fetch-depth: 0
-      - name: Setup .NET ${{ env.DOTNET_VERSION }}
+      - name: Setup .NET
         uses: actions/setup-dotnet@v6
         with:
-          dotnet-version: ${{ env.DOTNET_VERSION }}
+          global-json-file: global.json
       - name: Use Node.js ${{ env.NODE_VERSION }}
         uses: actions/setup-node@v7
         with:
