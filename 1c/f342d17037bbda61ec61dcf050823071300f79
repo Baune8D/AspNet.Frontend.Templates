@@ -1,0 +1,23 @@
+.editorconfig
+  s_1da20591e67452::t_74473398b929db 5-6,11-13
+.gitattributes
+  s_1da20591e67452::t_08afbadb0c89aa 1-2
+build.ps1
+  s_1da20591e67452::t_ee794813959b63 1-74
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "1cf342d17037bbda61ec61dcf050823071300f79",
+  "prompts": {},
+  "sessions": {
+    "s_1da20591e67452": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "56de8afb-cd13-4b9c-b07e-fc995dbca6f0",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Morten Larsen <mortenl41@gmail.com>"
+    }
+  }
+}
