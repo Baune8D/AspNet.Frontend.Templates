@@ -9,6 +9,9 @@ updates:
       day: monday
     cooldown:
       default-days: 7
+    commit-message:
+      prefix: chore
+      include: scope
     ignore:
       # Major versions are updated manually
       - dependency-name: '*'
@@ -34,6 +37,9 @@ updates:
       day: monday
     cooldown:
       default-days: 7
+    commit-message:
+      prefix: chore
+      include: scope
     ignore:
       # Major versions are updated manually
       - dependency-name: '*'
@@ -53,6 +59,9 @@ updates:
       day: monday
     cooldown:
       default-days: 7
+    commit-message:
+      prefix: chore
+      include: scope
     groups:
       github-actions:
         applies-to: version-updates
