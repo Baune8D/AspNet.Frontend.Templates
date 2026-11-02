@@ -19,7 +19,6 @@ updates:
     groups:
       npm:
         applies-to: version-updates
-        group-by: dependency-name
         patterns: ['*']
       npm-security:
         applies-to: security-updates
@@ -42,7 +41,6 @@ updates:
     groups:
       nuget:
         applies-to: version-updates
-        group-by: dependency-name
         patterns: ['*']
       nuget-security:
         applies-to: security-updates
