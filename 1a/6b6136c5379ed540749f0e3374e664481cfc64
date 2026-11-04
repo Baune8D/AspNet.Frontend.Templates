@@ -1,0 +1,21 @@
+AspNet.Frontend.Templates.slnx
+  s_1da20591e67452::t_c828ec8e28b0e6 6
+README.md
+  s_1da20591e67452::t_f80d03e7d3867a 6,121
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "1a6b6136c5379ed540749f0e3374e664481cfc64",
+  "prompts": {},
+  "sessions": {
+    "s_1da20591e67452": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "56de8afb-cd13-4b9c-b07e-fc995dbca6f0",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Morten Larsen <mortenl41@gmail.com>"
+    }
+  }
+}
