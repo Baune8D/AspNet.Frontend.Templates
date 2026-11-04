@@ -56,6 +56,7 @@ Use these sections, omitting empty ones, and end with a compare link:
 - New exceptions go in `.github/dependabot.yml` with a comment explaining why.
 - Before holding a package back, find the root cause and check the package's issue tracker. A failing upgrade is often caused by something else (sass-loader 17 failed because of `ts-node`), and upstream issues often list a workaround (fork-ts-checker-webpack-plugin 9.1).
 - The AspNet.AssetManager demo and the templates mirror the default ASP.NET Core templates, so they stay on jQuery 3 (`jquery-validation-unobtrusive` also requires it).
+- `build/_build.csproj` pins `NuGet.Packaging` and `System.Security.Cryptography.Xml` to patch vulnerable dependencies of Nuke.Common (NuGet 7.9 also fixes a `NuGet.Frameworks` load error with SDK 10.0.4xx). Remove the pins once Nuke.Common ships fixed versions.
 
 ## Verifying changes
 
