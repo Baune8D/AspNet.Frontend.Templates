@@ -3,7 +3,7 @@
 [![Build](https://github.com/Baune8D/AspNet.Frontend.Templates/actions/workflows/pipeline.yml/badge.svg?branch=main)](https://github.com/Baune8D/AspNet.Frontend.Templates/actions/workflows/pipeline.yml)
 [![NuGet Version](https://img.shields.io/nuget/v/AspNet.Frontend.Templates)](https://www.nuget.org/packages/AspNet.Frontend.Templates)
 [![NuGet Downloads](https://img.shields.io/nuget/dt/AspNet.Frontend.Templates)](https://www.nuget.org/packages/AspNet.Frontend.Templates)
-[![License: MIT](https://img.shields.io/github/license/Baune8D/AspNet.Frontend.Templates)](https://github.com/Baune8D/AspNet.Frontend.Templates/blob/main/LICENSE.txt)
+[![License: MIT](https://img.shields.io/github/license/Baune8D/AspNet.Frontend.Templates)](https://github.com/Baune8D/AspNet.Frontend.Templates/blob/main/LICENSE)
 
 **`dotnet new` templates for ASP.NET Core MVC and Razor Pages with Vite or Webpack.** Each template is the standard ASP.NET Core template with its frontend moved to a modern bundler: per-view bundles, hot reload in development, and hashed assets in production.
 
@@ -118,4 +118,4 @@ Example projects with more configuration:
 
 ## License
 
-[MIT](https://github.com/Baune8D/AspNet.Frontend.Templates/blob/main/LICENSE.txt)
+[MIT](https://github.com/Baune8D/AspNet.Frontend.Templates/blob/main/LICENSE)

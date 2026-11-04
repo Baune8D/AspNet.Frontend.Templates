@@ -3,7 +3,7 @@
     <File Path=".editorconfig" />
     <File Path=".gitignore" />
     <File Path="GitVersion.yml" />
-    <File Path="LICENSE.txt" />
+    <File Path="LICENSE" />
     <File Path="NuGet.Config" />
     <File Path="README.md" />
   </Folder>
