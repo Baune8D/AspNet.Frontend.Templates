@@ -1,0 +1,19 @@
+CLAUDE.md
+  s_1da20591e67452::t_d98f53793dfd43 59
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "34137781537baba7d740816a534d32f5e2eb64cc",
+  "prompts": {},
+  "sessions": {
+    "s_1da20591e67452": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "56de8afb-cd13-4b9c-b07e-fc995dbca6f0",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Morten Larsen <mortenl41@gmail.com>"
+    }
+  }
+}
