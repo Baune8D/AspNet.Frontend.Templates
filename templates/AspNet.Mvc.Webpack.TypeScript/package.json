@@ -11,7 +11,7 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
-    "bootstrap": "^5.3.8",
+    "bootstrap": "^5.3.9",
     "jquery": "^3.7.1",
     "jquery-validation": "^1.22.1",
     "jquery-validation-unobtrusive": "^4.0.0"
